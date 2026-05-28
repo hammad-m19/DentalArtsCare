@@ -1,426 +1,1048 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Dental Art Care — Premium dental care for your perfect smile. Book an appointment today." />
-  <title>Dental Art Care</title>
+  <meta name="description"
+    content="DentalArtCare — Premium dental care for your perfect smile. Book an appointment today." />
+  <title>DentalArtCare</title>
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap"
+    rel="stylesheet" />
 
   <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
 
-<!-- ================================================================
+  <!-- ================================================================
      PAGE LOADER
 ================================================================ -->
-<div id="page-loader" role="status" aria-label="Loading Dental Art Care">
-  <svg class="loader-tooth" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <path d="M30 8C20 8 14 15 14 22C14 27 16 30 16 36C16 42 18 52 22 52C26 52 27 44 30 44C33 44 34 52 38 52C42 52 44 42 44 36C44 30 46 27 46 22C46 15 40 8 30 8Z"/>
-  </svg>
-  <p class="loader-text">Dental Art Care</p>
-</div>
+  <div id="page-loader" role="status" aria-label="Loading DentalArtCare">
+    <svg class="loader-tooth" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path
+        d="M30 8C20 8 14 15 14 22C14 27 16 30 16 36C16 42 18 52 22 52C26 52 27 44 30 44C33 44 34 52 38 52C42 52 44 42 44 36C44 30 46 27 46 22C46 15 40 8 30 8Z" />
+    </svg>
+    <p class="loader-text">DentalArtCare</p>
+  </div>
 
-<!-- ================================================================
+  <!-- ================================================================
      NAVBAR
 ================================================================ -->
-<header id="navbar" role="banner">
-  <div class="container">
-    <nav class="nav-inner" aria-label="Main navigation">
-      <a href="#hero" class="nav-logo" aria-label="Dental Art Care — Home">
-        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
-          <circle cx="16" cy="16" r="15" fill="url(#logoGrad)" opacity="0.15"/>
-          <path d="M16 5C11 5 8 9 8 13C8 16 9.5 18 9.5 21.5C9.5 25 10.5 27 13 27C15 27 15.5 23 16 23C16.5 23 17 27 19 27C21.5 27 22.5 25 22.5 21.5C22.5 18 24 16 24 13C24 9 21 5 16 5Z" fill="url(#logoGrad)"/>
-          <defs>
-            <linearGradient id="logoGrad" x1="8" y1="5" x2="24" y2="27" gradientUnits="userSpaceOnUse">
-              <stop stop-color="#4FC3F7"/>
-              <stop offset="1" stop-color="#81C784"/>
-            </linearGradient>
-          </defs>
-        </svg>
-        Dental Art <span>Care</span>
-      </a>
+  <header id="navbar" role="banner">
+    <div class="container">
+      <nav class="nav-inner" aria-label="Main navigation">
+        <a href="#hero" class="nav-logo" aria-label="DentalArtCare — Home">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+            <circle cx="16" cy="16" r="15" fill="url(#logoGrad)" opacity="0.15" />
+            <path
+              d="M16 5C11 5 8 9 8 13C8 16 9.5 18 9.5 21.5C9.5 25 10.5 27 13 27C15 27 15.5 23 16 23C16.5 23 17 27 19 27C21.5 27 22.5 25 22.5 21.5C22.5 18 24 16 24 13C24 9 21 5 16 5Z"
+              fill="url(#logoGrad)" />
+            <defs>
+              <linearGradient id="logoGrad" x1="8" y1="5" x2="24" y2="27" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#4FC3F7" />
+                <stop offset="1" stop-color="#81C784" />
+              </linearGradient>
+            </defs>
+          </svg>
+          DentalArt<span>Care</span>
+        </a>
 
-      <!-- Desktop nav links -->
-      <ul class="nav-links" role="list">
-        <li><a href="#services">Services</a></li>
-        <li><a href="#team">Our Team</a></li>
-        <li><a href="#testimonials">Testimonials</a></li>
-        <li><a href="#booking" class="btn btn-primary nav-cta">Book Appointment</a></li>
-      </ul>
+        <!-- Desktop nav links -->
+        <ul class="nav-links" role="list">
+          <li><a href="#services">Services</a></li>
+          <li><a href="#team">Our Team</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#booking" class="btn btn-primary nav-cta">Book Appointment</a></li>
+        </ul>
 
-      <!-- Mobile hamburger -->
-      <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-mobile-menu" id="hamburger-btn">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </nav>
-  </div>
-</header>
+        <!-- Mobile hamburger -->
+        <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false"
+          aria-controls="nav-mobile-menu" id="hamburger-btn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
 
-<!-- Mobile nav drawer -->
-<nav class="nav-mobile" id="nav-mobile-menu" aria-label="Mobile navigation" aria-hidden="true">
-  <a href="#services"      class="mobile-nav-link">Services</a>
-  <a href="#stats"         class="mobile-nav-link">About</a>
-  <a href="#team"          class="mobile-nav-link">Our Team</a>
-  <a href="#testimonials"  class="mobile-nav-link">Testimonials</a>
-  <a href="#booking"       class="mobile-nav-link">Book Now</a>
-</nav>
+  <!-- Mobile nav drawer -->
+  <nav class="nav-mobile" id="nav-mobile-menu" aria-label="Mobile navigation" aria-hidden="true">
+    <a href="#services" class="mobile-nav-link">Services</a>
+    <a href="#stats" class="mobile-nav-link">About</a>
+    <a href="#team" class="mobile-nav-link">Our Team</a>
+    <a href="#testimonials" class="mobile-nav-link">Testimonials</a>
+    <a href="#booking" class="mobile-nav-link">Book Now</a>
+  </nav>
 
-<!-- ================================================================
+  <!-- ================================================================
      HERO SECTION
 ================================================================ -->
-<section id="hero" aria-label="Hero">
-  <canvas id="hero-canvas" aria-hidden="true"></canvas>
+  <section id="hero" aria-label="Hero">
+    <canvas id="hero-canvas" aria-hidden="true"></canvas>
 
-  <div class="container">
-    <div class="hero-inner">
-      <!-- Content -->
-      <div class="hero-content">
-        <div class="hero-badge" aria-label="Clinic status">
-          <span class="dot" aria-hidden="true"></span>
-          Accepting New Patients
+    <div class="container">
+      <div class="hero-inner">
+        <!-- Content -->
+        <div class="hero-content">
+          <div class="hero-badge" aria-label="Clinic status">
+            <span class="dot" aria-hidden="true"></span>
+            Accepting New Patients
+          </div>
+
+          <h1 class="hero-headline">
+            Your <span class="highlight">Perfect Smile</span><br>Starts Here
+          </h1>
+
+          <p class="hero-subtext">
+            Experience world-class dental care in a warm, comfortable environment. Our expert team uses the latest
+            technology to give you the smile you deserve.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#booking" class="btn btn-primary btn-glow" id="hero-cta" aria-label="Book your appointment">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" aria-hidden="true">
+                <rect x="3" y="4" width="18" height="18" rx="2" />
+                <line x1="16" y1="2" x2="16" y2="6" />
+                <line x1="8" y1="2" x2="8" y2="6" />
+                <line x1="3" y1="10" x2="21" y2="10" />
+              </svg>
+              Book Appointment
+            </a>
+            <a href="#services" class="btn btn-outline" aria-label="Explore our dental services">
+              Explore Services
+            </a>
+          </div>
+
+          <div class="hero-social-proof" aria-label="Happy patients">
+            <div class="avatars" aria-hidden="true">
+              <span title="Patient 1">JM</span>
+              <span title="Patient 2">SR</span>
+              <span title="Patient 3">AP</span>
+              <span title="Patient 4">KL</span>
+            </div>
+            <div class="social-proof-text">
+              <strong>10,000+ Happy Patients</strong>
+              Trusted by families across the city
+            </div>
+          </div>
         </div>
 
-        <h1 class="hero-headline">
-          Your <span class="highlight">Perfect Smile</span><br>Starts Here
-        </h1>
+        <!-- Visual -->
+        <div class="hero-visual" aria-hidden="true">
+          <div class="hero-visual-bg"></div>
 
-        <p class="hero-subtext">
-          Experience world-class dental care in a warm, comfortable environment. Our expert team uses the latest technology to give you the smile you deserve.
-        </p>
+          <!-- Floating badges -->
+          <div class="float-badge top-left">
+            <div class="badge-icon">⭐</div>
+            <div>
+              <strong style="display:block;font-size:0.9rem">4.9/5</strong>
+              <span style="font-size:0.72rem;color:var(--text-muted)">Rating</span>
+            </div>
+          </div>
 
-        <div class="hero-actions">
-          <a href="#booking" class="btn btn-primary btn-glow" id="hero-cta" aria-label="Book your appointment">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true">
-              <rect x="3" y="4" width="18" height="18" rx="2"/>
-              <line x1="16" y1="2" x2="16" y2="6"/>
-              <line x1="8" y1="2" x2="8" y2="6"/>
-              <line x1="3" y1="10" x2="21" y2="10"/>
+          <div class="hero-tooth-wrap">
+            <!-- Detailed tooth SVG -->
+            <svg class="hero-tooth-svg" viewBox="0 0 300 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="toothGrad" x1="50" y1="20" x2="250" y2="300" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#ffffff" />
+                  <stop offset="40%" stop-color="#e8f7fd" />
+                  <stop offset="100%" stop-color="#c8ebf8" />
+                </linearGradient>
+                <linearGradient id="toothShine" x1="80" y1="40" x2="140" y2="120" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="white" stop-opacity="0.9" />
+                  <stop offset="100%" stop-color="white" stop-opacity="0" />
+                </linearGradient>
+                <filter id="toothShadow">
+                  <feDropShadow dx="0" dy="12" stdDeviation="20" flood-color="#4FC3F7" flood-opacity="0.3" />
+                </filter>
+              </defs>
+
+              <!-- Main tooth body -->
+              <path
+                d="M150 25 C110 25 75 45 70 80 C65 110 72 135 72 155 C72 185 74 215 76 235 C78 255 82 280 90 290 C98 300 108 295 120 280 C130 267 138 250 150 250 C162 250 170 267 180 280 C192 295 202 300 210 290 C218 280 222 255 224 235 C226 215 228 185 228 155 C228 135 235 110 230 80 C225 45 190 25 150 25Z"
+                fill="url(#toothGrad)" filter="url(#toothShadow)" stroke="rgba(79,195,247,0.2)" stroke-width="1" />
+
+              <!-- Crown groove lines -->
+              <path d="M150 25 C150 50 148 70 146 90 C145 100 144 110 145 120" stroke="rgba(79,195,247,0.25)"
+                stroke-width="1.5" stroke-linecap="round" fill="none" />
+              <path d="M120 32 C125 55 126 75 126 95 C126 105 127 115 128 125" stroke="rgba(79,195,247,0.15)"
+                stroke-width="1" stroke-linecap="round" fill="none" />
+              <path d="M180 32 C175 55 174 75 174 95 C174 105 173 115 172 125" stroke="rgba(79,195,247,0.15)"
+                stroke-width="1" stroke-linecap="round" fill="none" />
+
+              <!-- Shine / highlight -->
+              <path d="M100 50 C105 65 106 80 105 95 C104 105 103 112 104 118" stroke="url(#toothShine)"
+                stroke-width="6" stroke-linecap="round" fill="none" />
+              <ellipse cx="115" cy="65" rx="8" ry="14" fill="white" opacity="0.4" transform="rotate(-10 115 65)" />
+
+              <!-- Root suggestion at bottom -->
+              <path d="M120 255 C115 270 112 285 115 295 C118 302 124 300 128 292" stroke="rgba(79,195,247,0.3)"
+                stroke-width="1.5" fill="none" stroke-linecap="round" />
+              <path d="M180 255 C185 270 188 285 185 295 C182 302 176 300 172 292" stroke="rgba(79,195,247,0.3)"
+                stroke-width="1.5" fill="none" stroke-linecap="round" />
+
+              <!-- Sparkle/star elements -->
+              <g opacity="0.7">
+                <path d="M55 80 L58 73 L61 80 L68 83 L61 86 L58 93 L55 86 L48 83 Z" fill="#4FC3F7" />
+                <path d="M245 120 L247 115 L249 120 L254 122 L249 124 L247 129 L245 124 L240 122 Z" fill="#81C784" />
+                <path d="M65 200 L66.5 196 L68 200 L72 201.5 L68 203 L66.5 207 L65 203 L61 201.5 Z" fill="#4FC3F7"
+                  opacity="0.5" />
+              </g>
+
+              <!-- Small decorative dots -->
+              <circle cx="238" cy="80" r="4" fill="#4FC3F7" opacity="0.4" />
+              <circle cx="62" cy="150" r="3" fill="#81C784" opacity="0.4" />
+              <circle cx="252" cy="175" r="5" fill="#4FC3F7" opacity="0.25" />
             </svg>
-            Book Appointment
-          </a>
-          <a href="#services" class="btn btn-outline" aria-label="Explore our dental services">
-            Explore Services
-          </a>
-        </div>
-
-        <div class="hero-social-proof" aria-label="Happy patients">
-          <div class="avatars" aria-hidden="true">
-            <span title="Patient 1">JM</span>
-            <span title="Patient 2">SR</span>
-            <span title="Patient 3">AP</span>
-            <span title="Patient 4">KL</span>
           </div>
-          <div class="social-proof-text">
-            <strong>10,000+ Happy Patients</strong>
-            Trusted by families across the city
-          </div>
-        </div>
-      </div>
 
-      <!-- Visual -->
-      <div class="hero-visual" aria-hidden="true">
-        <div class="hero-visual-bg"></div>
-
-        <!-- Floating badges -->
-        <div class="float-badge top-left">
-          <div class="badge-icon">⭐</div>
-          <div>
-            <strong style="display:block;font-size:0.9rem">4.9/5</strong>
-            <span style="font-size:0.72rem;color:var(--text-muted)">Rating</span>
-          </div>
-        </div>
-
-        <div class="hero-tooth-wrap">
-          <!-- Detailed tooth SVG -->
-          <svg class="hero-tooth-svg" viewBox="0 0 300 320" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <linearGradient id="toothGrad" x1="50" y1="20" x2="250" y2="300" gradientUnits="userSpaceOnUse">
-                <stop offset="0%" stop-color="#ffffff"/>
-                <stop offset="40%" stop-color="#e8f7fd"/>
-                <stop offset="100%" stop-color="#c8ebf8"/>
-              </linearGradient>
-              <linearGradient id="toothShine" x1="80" y1="40" x2="140" y2="120" gradientUnits="userSpaceOnUse">
-                <stop offset="0%" stop-color="white" stop-opacity="0.9"/>
-                <stop offset="100%" stop-color="white" stop-opacity="0"/>
-              </linearGradient>
-              <filter id="toothShadow">
-                <feDropShadow dx="0" dy="12" stdDeviation="20" flood-color="#4FC3F7" flood-opacity="0.3"/>
-              </filter>
-            </defs>
-
-            <!-- Main tooth body -->
-            <path d="M150 25 C110 25 75 45 70 80 C65 110 72 135 72 155 C72 185 74 215 76 235 C78 255 82 280 90 290 C98 300 108 295 120 280 C130 267 138 250 150 250 C162 250 170 267 180 280 C192 295 202 300 210 290 C218 280 222 255 224 235 C226 215 228 185 228 155 C228 135 235 110 230 80 C225 45 190 25 150 25Z" fill="url(#toothGrad)" filter="url(#toothShadow)" stroke="rgba(79,195,247,0.2)" stroke-width="1"/>
-
-            <!-- Crown groove lines -->
-            <path d="M150 25 C150 50 148 70 146 90 C145 100 144 110 145 120" stroke="rgba(79,195,247,0.25)" stroke-width="1.5" stroke-linecap="round" fill="none"/>
-            <path d="M120 32 C125 55 126 75 126 95 C126 105 127 115 128 125" stroke="rgba(79,195,247,0.15)" stroke-width="1" stroke-linecap="round" fill="none"/>
-            <path d="M180 32 C175 55 174 75 174 95 C174 105 173 115 172 125" stroke="rgba(79,195,247,0.15)" stroke-width="1" stroke-linecap="round" fill="none"/>
-
-            <!-- Shine / highlight -->
-            <path d="M100 50 C105 65 106 80 105 95 C104 105 103 112 104 118" stroke="url(#toothShine)" stroke-width="6" stroke-linecap="round" fill="none"/>
-            <ellipse cx="115" cy="65" rx="8" ry="14" fill="white" opacity="0.4" transform="rotate(-10 115 65)"/>
-
-            <!-- Root suggestion at bottom -->
-            <path d="M120 255 C115 270 112 285 115 295 C118 302 124 300 128 292" stroke="rgba(79,195,247,0.3)" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-            <path d="M180 255 C185 270 188 285 185 295 C182 302 176 300 172 292" stroke="rgba(79,195,247,0.3)" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-
-            <!-- Sparkle/star elements -->
-            <g opacity="0.7">
-              <path d="M55 80 L58 73 L61 80 L68 83 L61 86 L58 93 L55 86 L48 83 Z" fill="#4FC3F7"/>
-              <path d="M245 120 L247 115 L249 120 L254 122 L249 124 L247 129 L245 124 L240 122 Z" fill="#81C784"/>
-              <path d="M65 200 L66.5 196 L68 200 L72 201.5 L68 203 L66.5 207 L65 203 L61 201.5 Z" fill="#4FC3F7" opacity="0.5"/>
-            </g>
-
-            <!-- Small decorative dots -->
-            <circle cx="238" cy="80" r="4" fill="#4FC3F7" opacity="0.4"/>
-            <circle cx="62" cy="150" r="3" fill="#81C784" opacity="0.4"/>
-            <circle cx="252" cy="175" r="5" fill="#4FC3F7" opacity="0.25"/>
-          </svg>
-        </div>
-
-        <div class="float-badge bottom-right">
-          <div class="badge-icon">🦷</div>
-          <div>
-            <strong style="display:block;font-size:0.9rem">Pain-Free</strong>
-            <span style="font-size:0.72rem;color:var(--text-muted)">Treatments</span>
+          <div class="float-badge bottom-right">
+            <div class="badge-icon">🦷</div>
+            <div>
+              <strong style="display:block;font-size:0.9rem">Pain-Free</strong>
+              <span style="font-size:0.72rem;color:var(--text-muted)">Treatments</span>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <!-- Scroll indicator -->
-  <div class="scroll-indicator" aria-hidden="true">
-    <div class="scroll-mouse">
-      <div class="scroll-wheel"></div>
+    <!-- Scroll indicator -->
+    <div class="scroll-indicator" aria-hidden="true">
+      <div class="scroll-mouse">
+        <div class="scroll-wheel"></div>
+      </div>
+      <span>Scroll</span>
     </div>
-    <span>Scroll</span>
-  </div>
-</section>
+  </section>
 
-<!-- ================================================================
+  x
+  <!-- ================================================================
      STATS SECTION
 ================================================================ -->
-<section id="stats" aria-labelledby="stats-heading">
-  <div class="container">
-    <h2 id="stats-heading" class="sr-only">Our Achievements</h2>
-    <div class="stats-grid">
+  <section id="stats" aria-labelledby="stats-heading">
+    <div class="container">
+      <h2 id="stats-heading" class="sr-only">Our Achievements</h2>
+      <div class="stats-grid">
 
-      <div class="stat-item reveal" role="figure" aria-label="10,000 plus happy patients">
-        <div class="stat-icon" aria-hidden="true">👥</div>
-        <div class="stat-number" data-target="10000" data-suffix="+">0</div>
-        <div class="stat-label">Happy Patients</div>
+        <div class="stat-item reveal" role="figure" aria-label="10,000 plus happy patients">
+          <div class="stat-icon" aria-hidden="true">👥</div>
+          <div class="stat-number" data-target="10000" data-suffix="+">0</div>
+          <div class="stat-label">Happy Patients</div>
+        </div>
+
+        <div class="stat-item reveal" role="figure" aria-label="15 years of experience">
+          <div class="stat-icon" aria-hidden="true">🏆</div>
+          <div class="stat-number" data-target="15" data-suffix=" Yrs">0</div>
+          <div class="stat-label">Years Experience</div>
+        </div>
+
+        <div class="stat-item reveal" role="figure" aria-label="50 plus specialist doctors">
+          <div class="stat-icon" aria-hidden="true">👨‍⚕️</div>
+          <div class="stat-number" data-target="50" data-suffix="+">0</div>
+          <div class="stat-label">Expert Doctors</div>
+        </div>
+
+        <div class="stat-item reveal" role="figure" aria-label="4.9 star rating">
+          <div class="stat-icon" aria-hidden="true">⭐</div>
+          <div class="stat-number" data-target="4.9" data-suffix="★" data-decimal="1">0</div>
+          <div class="stat-label">Average Rating</div>
+        </div>
+
       </div>
-
-      <div class="stat-item reveal" role="figure" aria-label="15 years of experience">
-        <div class="stat-icon" aria-hidden="true">🏆</div>
-        <div class="stat-number" data-target="15" data-suffix=" Yrs">0</div>
-        <div class="stat-label">Years Experience</div>
-      </div>
-
-      <div class="stat-item reveal" role="figure" aria-label="50 plus specialist doctors">
-        <div class="stat-icon" aria-hidden="true">👨‍⚕️</div>
-        <div class="stat-number" data-target="50" data-suffix="+">0</div>
-        <div class="stat-label">Expert Doctors</div>
-      </div>
-
-      <div class="stat-item reveal" role="figure" aria-label="4.9 star rating">
-        <div class="stat-icon" aria-hidden="true">⭐</div>
-        <div class="stat-number" data-target="4.9" data-suffix="★" data-decimal="1">0</div>
-        <div class="stat-label">Average Rating</div>
-      </div>
-
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ================================================================
+  <!-- ================================================================
      TEAM SECTION
 ================================================================ -->
-<section id="team" aria-labelledby="team-heading">
-  <div class="container">
-    <div class="section-header reveal">
-      <div class="section-tag">👨‍⚕️ Our Specialists</div>
-      <h2 class="section-title" id="team-heading">Meet Our <em>Expert Team</em></h2>
-      <p class="section-subtitle">Our board-certified dentists bring decades of combined expertise and genuine care to every patient interaction.</p>
+  <section id="team" aria-labelledby="team-heading">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-tag">👨‍⚕️ Our Specialists</div>
+        <h2 class="section-title" id="team-heading">Meet Our <em>Expert Team</em></h2>
+        <p class="section-subtitle">Our board-certified dentists bring decades of combined expertise and genuine care to
+          every patient interaction.</p>
+      </div>
+
+      <div class="team-grid">
+
+        <!-- Dr. Sarah Chen -->
+        <div class="team-card reveal" tabindex="0" aria-label="Dr. Sarah Chen — hover or press Enter to learn more"
+          role="button">
+          <div class="team-card-inner">
+            <!-- Front -->
+            <div class="team-front">
+              <div class="team-avatar">
+                <div class="avatar-gradient">
+                  <div class="avatar-bg-pattern"></div>
+                  <div class="avatar-figure" style="background: linear-gradient(160deg,#4FC3F7 0%,#81C784 100%)">
+                    <div class="avatar-head"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="team-info">
+                <div class="team-name">Dr. Sarah Chen</div>
+                <div class="team-title">Lead Orthodontist</div>
+                <div class="team-specialties">
+                  <span class="specialty-tag">Braces</span>
+                  <span class="specialty-tag">Clear Aligners</span>
+                  <span class="specialty-tag">Jaw Surgery</span>
+                </div>
+                <p class="flip-hint" aria-hidden="true">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path
+                      d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4" />
+                  </svg>
+                  Hover to see bio
+                </p>
+              </div>
+            </div>
+            <!-- Back -->
+            <div class="team-back" aria-hidden="true">
+              <div class="team-back-avatar">SC</div>
+              <h3>Dr. Sarah Chen</h3>
+              <p class="title">Lead Orthodontist</p>
+              <p class="bio">With 12 years of clinical excellence, Dr. Chen has transformed over 3,000 smiles. She
+                graduated summa cum laude from Johns Hopkins and is a fellow of the American Association of
+                Orthodontists.</p>
+              <div class="social-links">
+                <a href="#" class="social-icon-btn" aria-label="Dr. Chen's LinkedIn">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2zM4 6a2 2 0 110-4 2 2 0 010 4z" />
+                  </svg>
+                </a>
+                <a href="#" class="social-icon-btn" aria-label="Dr. Chen's email">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                    <polyline points="22,6 12,13 2,6" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dr. Michael Torres -->
+        <div class="team-card reveal" tabindex="0" aria-label="Dr. Michael Torres — hover or press Enter to learn more"
+          role="button">
+          <div class="team-card-inner">
+            <div class="team-front">
+              <div class="team-avatar">
+                <div class="avatar-gradient">
+                  <div class="avatar-bg-pattern"></div>
+                  <div class="avatar-figure" style="background: linear-gradient(160deg,#0288D1 0%,#4FC3F7 100%)">
+                    <div class="avatar-head"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="team-info">
+                <div class="team-name">Dr. Michael Torres</div>
+                <div class="team-title">Implant Specialist</div>
+                <div class="team-specialties">
+                  <span class="specialty-tag">Implants</span>
+                  <span class="specialty-tag">Bone Grafting</span>
+                  <span class="specialty-tag">Oral Surgery</span>
+                </div>
+                <p class="flip-hint" aria-hidden="true">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path
+                      d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4" />
+                  </svg>
+                  Hover to see bio
+                </p>
+              </div>
+            </div>
+            <div class="team-back" aria-hidden="true">
+              <div class="team-back-avatar" style="background:linear-gradient(135deg,#0288D1,#4FC3F7)">MT</div>
+              <h3>Dr. Michael Torres</h3>
+              <p class="title">Implant Specialist</p>
+              <p class="bio">Dr. Torres is internationally recognized for his minimally invasive implant techniques. He
+                has placed over 8,000 implants and regularly lectures at dental conferences worldwide.</p>
+              <div class="social-links">
+                <a href="#" class="social-icon-btn" aria-label="Dr. Torres's LinkedIn">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2zM4 6a2 2 0 110-4 2 2 0 010 4z" />
+                  </svg>
+                </a>
+                <a href="#" class="social-icon-btn" aria-label="Dr. Torres's email">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                    <polyline points="22,6 12,13 2,6" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dr. Priya Sharma -->
+        <div class="team-card reveal" tabindex="0" aria-label="Dr. Priya Sharma — hover or press Enter to learn more"
+          role="button">
+          <div class="team-card-inner">
+            <div class="team-front">
+              <div class="team-avatar">
+                <div class="avatar-gradient">
+                  <div class="avatar-bg-pattern"></div>
+                  <div class="avatar-figure" style="background: linear-gradient(160deg,#81C784 0%,#388E3C 100%)">
+                    <div class="avatar-head"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="team-info">
+                <div class="team-name">Dr. Priya Sharma</div>
+                <div class="team-title">Cosmetic Dentist</div>
+                <div class="team-specialties">
+                  <span class="specialty-tag">Veneers</span>
+                  <span class="specialty-tag">Whitening</span>
+                  <span class="specialty-tag">Smile Design</span>
+                </div>
+                <p class="flip-hint" aria-hidden="true">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path
+                      d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4" />
+                  </svg>
+                  Hover to see bio
+                </p>
+              </div>
+            </div>
+            <div class="team-back" aria-hidden="true">
+              <div class="team-back-avatar" style="background:linear-gradient(135deg,#81C784,#388E3C)">PS</div>
+              <h3>Dr. Priya Sharma</h3>
+              <p class="title">Cosmetic Dentist</p>
+              <p class="bio">A true artist of the smile, Dr. Sharma combines aesthetic precision with cutting-edge
+                dental techniques. Her smile makeovers have been featured in top dental publications globally.</p>
+              <div class="social-links">
+                <a href="#" class="social-icon-btn" aria-label="Dr. Sharma's LinkedIn">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2zM4 6a2 2 0 110-4 2 2 0 010 4z" />
+                  </svg>
+                </a>
+                <a href="#" class="social-icon-btn" aria-label="Dr. Sharma's email">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                    <polyline points="22,6 12,13 2,6" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /team-grid -->
     </div>
+  </section>
 
-    <div class="team-grid">
-
-      <!-- Dr. Sarah Chen -->
-      <div class="team-card reveal" tabindex="0" aria-label="Dr. Sarah Chen — hover or press Enter to learn more" role="button">
-        <div class="team-card-inner">
-          <!-- Front -->
-          <div class="team-front">
-            <div class="team-avatar">
-              <div class="avatar-gradient">
-                <div class="avatar-bg-pattern"></div>
-                <div class="avatar-figure" style="background: linear-gradient(160deg,#4FC3F7 0%,#81C784 100%)">
-                  <div class="avatar-head"></div>
-                </div>
-              </div>
-            </div>
-            <div class="team-info">
-              <div class="team-name">Dr. Sarah Chen</div>
-              <div class="team-title">Lead Orthodontist</div>
-              <div class="team-specialties">
-                <span class="specialty-tag">Braces</span>
-                <span class="specialty-tag">Clear Aligners</span>
-                <span class="specialty-tag">Jaw Surgery</span>
-              </div>
-              <p class="flip-hint" aria-hidden="true">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"/></svg>
-                Hover to see bio
-              </p>
-            </div>
-          </div>
-          <!-- Back -->
-          <div class="team-back" aria-hidden="true">
-            <div class="team-back-avatar">SC</div>
-            <h3>Dr. Sarah Chen</h3>
-            <p class="title">Lead Orthodontist</p>
-            <p class="bio">With 12 years of clinical excellence, Dr. Chen has transformed over 3,000 smiles. She graduated summa cum laude from Johns Hopkins and is a fellow of the American Association of Orthodontists.</p>
-            <div class="social-links">
-              <a href="#" class="social-icon-btn" aria-label="Dr. Chen's LinkedIn">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2zM4 6a2 2 0 110-4 2 2 0 010 4z"/></svg>
-              </a>
-              <a href="#" class="social-icon-btn" aria-label="Dr. Chen's email">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-              </a>
-            </div>
-          </div>
-        </div>
+  <section id="services" aria-labelledby="services-heading">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-tag">🦷 What We Offer</div>
+        <h2 class="section-title" id="services-heading">Comprehensive <em>Dental Care</em></h2>
+        <p class="section-subtitle">From routine cleanings to complete smile transformations, we offer a full range of
+          dental services tailored to your needs.</p>
       </div>
 
-      <!-- Dr. Michael Torres -->
-      <div class="team-card reveal" tabindex="0" aria-label="Dr. Michael Torres — hover or press Enter to learn more" role="button">
-        <div class="team-card-inner">
-          <div class="team-front">
-            <div class="team-avatar">
-              <div class="avatar-gradient">
-                <div class="avatar-bg-pattern"></div>
-                <div class="avatar-figure" style="background: linear-gradient(160deg,#0288D1 0%,#4FC3F7 100%)">
-                  <div class="avatar-head"></div>
-                </div>
-              </div>
-            </div>
-            <div class="team-info">
-              <div class="team-name">Dr. Michael Torres</div>
-              <div class="team-title">Implant Specialist</div>
-              <div class="team-specialties">
-                <span class="specialty-tag">Implants</span>
-                <span class="specialty-tag">Bone Grafting</span>
-                <span class="specialty-tag">Oral Surgery</span>
-              </div>
-              <p class="flip-hint" aria-hidden="true">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"/></svg>
-                Hover to see bio
-              </p>
-            </div>
+      <div class="services-grid">
+
+        <!-- Service 1: Whitening -->
+        <article class="service-card reveal" tabindex="0" aria-label="Teeth Whitening service">
+          <div class="service-icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--primary-dark)" stroke-width="2"
+              stroke-linecap="round">
+              <path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z" />
+            </svg>
           </div>
-          <div class="team-back" aria-hidden="true">
-            <div class="team-back-avatar" style="background:linear-gradient(135deg,#0288D1,#4FC3F7)">MT</div>
-            <h3>Dr. Michael Torres</h3>
-            <p class="title">Implant Specialist</p>
-            <p class="bio">Dr. Torres is internationally recognized for his minimally invasive implant techniques. He has placed over 8,000 implants and regularly lectures at dental conferences worldwide.</p>
-            <div class="social-links">
-              <a href="#" class="social-icon-btn" aria-label="Dr. Torres's LinkedIn">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2zM4 6a2 2 0 110-4 2 2 0 010 4z"/></svg>
-              </a>
-              <a href="#" class="social-icon-btn" aria-label="Dr. Torres's email">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-              </a>
-            </div>
+          <h3>Teeth Whitening</h3>
+          <p>Brighten your smile up to 8 shades with our professional in-office whitening treatment. Fast, safe, and
+            long-lasting results.</p>
+          <a href="#booking" class="service-link" aria-label="Book Teeth Whitening appointment">
+            Book Now <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2.5" stroke-linecap="round" aria-hidden="true">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </a>
+        </article>
+
+        <!-- Service 2: Implants -->
+        <article class="service-card reveal" tabindex="0" aria-label="Dental Implants service">
+          <div class="service-icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--primary-dark)" stroke-width="2"
+              stroke-linecap="round">
+              <circle cx="12" cy="8" r="4" />
+              <path d="M12 12v10M9 16h6M10 20h4" />
+            </svg>
           </div>
-        </div>
+          <h3>Dental Implants</h3>
+          <p>Replace missing teeth with titanium implants that look, feel, and function exactly like natural teeth. A
+            permanent solution for a confident smile.</p>
+          <a href="#booking" class="service-link" aria-label="Book Dental Implants appointment">
+            Book Now <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2.5" stroke-linecap="round" aria-hidden="true">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </a>
+        </article>
+
+        <!-- Service 3: Braces -->
+        <article class="service-card reveal" tabindex="0" aria-label="Braces and Orthodontics service">
+          <div class="service-icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--primary-dark)" stroke-width="2"
+              stroke-linecap="round">
+              <rect x="3" y="10" width="18" height="4" rx="2" />
+              <line x1="7" y1="10" x2="7" y2="14" />
+              <line x1="12" y1="10" x2="12" y2="14" />
+              <line x1="17" y1="10" x2="17" y2="14" />
+            </svg>
+          </div>
+          <h3>Braces & Orthodontics</h3>
+          <p>Traditional metal braces or virtually invisible clear aligners — we offer customised orthodontic solutions
+            to straighten any smile at any age.</p>
+          <a href="#booking" class="service-link" aria-label="Book Braces appointment">
+            Book Now <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2.5" stroke-linecap="round" aria-hidden="true">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </a>
+        </article>
+
+        <!-- Service 4: Root Canal -->
+        <article class="service-card reveal" tabindex="0" aria-label="Root Canal Treatment service">
+          <div class="service-icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--primary-dark)" stroke-width="2"
+              stroke-linecap="round">
+              <path
+                d="M12 3C8 3 6 6 6 9C6 11.5 7 13 7 15.5C7 18 7.5 21 10 21C12 21 12.5 18 12 18C11.5 18 12 21 14 21C16.5 21 17 18 17 15.5C17 13 18 11.5 18 9C18 6 16 3 12 3Z" />
+            </svg>
+          </div>
+          <h3>Root Canal Therapy</h3>
+          <p>Modern, pain-free root canal treatments to save your natural tooth and eliminate infection. Most patients
+            are surprised by how comfortable the procedure is.</p>
+          <a href="#booking" class="service-link" aria-label="Book Root Canal appointment">
+            Book Now <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2.5" stroke-linecap="round" aria-hidden="true">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </a>
+        </article>
+
+        <!-- Service 5: Cleaning -->
+        <article class="service-card reveal" tabindex="0" aria-label="Dental Cleaning service">
+          <div class="service-icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--primary-dark)" stroke-width="2"
+              stroke-linecap="round">
+              <path d="M9.5 2a.5.5 0 01.5.5v1a3 3 0 006 0v-1a.5.5 0 011 0V5a4 4 0 01-8 0V2.5a.5.5 0 01.5-.5z" />
+              <path d="M7 8h10l-1 14H8L7 8z" />
+            </svg>
+          </div>
+          <h3>Professional Cleaning</h3>
+          <p>Comprehensive teeth cleaning and oral hygiene assessment. Remove plaque, tartar, and stains that regular
+            brushing can't reach. Recommended every 6 months.</p>
+          <a href="#booking" class="service-link" aria-label="Book Professional Cleaning appointment">
+            Book Now <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2.5" stroke-linecap="round" aria-hidden="true">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </a>
+        </article>
+
+        <!-- Service 6: Veneers -->
+        <article class="service-card reveal" tabindex="0" aria-label="Dental Veneers service">
+          <div class="service-icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--primary-dark)" stroke-width="2"
+              stroke-linecap="round">
+              <path d="M4 7c0-1 .8-2 2-2h12c1.2 0 2 1 2 2v1c0 1-.8 2-2 2H6c-1.2 0-2-1-2-2V7z" />
+              <path d="M6 10v8c0 1 .8 1.5 1.5 1.5h9c.7 0 1.5-.5 1.5-1.5v-8" />
+              <line x1="12" y1="10" x2="12" y2="18" />
+              <line x1="9" y1="10" x2="9" y2="18" />
+              <line x1="15" y1="10" x2="15" y2="18" />
+            </svg>
+          </div>
+          <h3>Porcelain Veneers</h3>
+          <p>Ultra-thin custom porcelain shells bonded to the front of teeth to correct chips, cracks, gaps, and
+            discolouration. Transform your smile in just two visits.</p>
+          <a href="#booking" class="service-link" aria-label="Book Porcelain Veneers appointment">
+            Book Now <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2.5" stroke-linecap="round" aria-hidden="true">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </a>
+        </article>
+
       </div>
-
-      <!-- Dr. Priya Sharma -->
-      <div class="team-card reveal" tabindex="0" aria-label="Dr. Priya Sharma — hover or press Enter to learn more" role="button">
-        <div class="team-card-inner">
-          <div class="team-front">
-            <div class="team-avatar">
-              <div class="avatar-gradient">
-                <div class="avatar-bg-pattern"></div>
-                <div class="avatar-figure" style="background: linear-gradient(160deg,#81C784 0%,#388E3C 100%)">
-                  <div class="avatar-head"></div>
-                </div>
-              </div>
-            </div>
-            <div class="team-info">
-              <div class="team-name">Dr. Priya Sharma</div>
-              <div class="team-title">Cosmetic Dentist</div>
-              <div class="team-specialties">
-                <span class="specialty-tag">Veneers</span>
-                <span class="specialty-tag">Whitening</span>
-                <span class="specialty-tag">Smile Design</span>
-              </div>
-              <p class="flip-hint" aria-hidden="true">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"/></svg>
-                Hover to see bio
-              </p>
-            </div>
-          </div>
-          <div class="team-back" aria-hidden="true">
-            <div class="team-back-avatar" style="background:linear-gradient(135deg,#81C784,#388E3C)">PS</div>
-            <h3>Dr. Priya Sharma</h3>
-            <p class="title">Cosmetic Dentist</p>
-            <p class="bio">A true artist of the smile, Dr. Sharma combines aesthetic precision with cutting-edge dental techniques. Her smile makeovers have been featured in top dental publications globally.</p>
-            <div class="social-links">
-              <a href="#" class="social-icon-btn" aria-label="Dr. Sharma's LinkedIn">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2zM4 6a2 2 0 110-4 2 2 0 010 4z"/></svg>
-              </a>
-              <a href="#" class="social-icon-btn" aria-label="Dr. Sharma's email">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div><!-- /team-grid -->
-  </div>
-</section>
-
-<section id="services" aria-labelledby="services-heading">
-  <div class="container">
-    <div class="section-header reveal">
-      <div class="section-tag">🦷 What We Offer</div>
-      <h2 class="section-title" id="services-heading">Comprehensive <em>Dental Care</em></h2>
-      <p class="section-subtitle">From routine cleanings to complete smile transformations, we offer a full range of dental services tailored to your needs.</p>
     </div>
+  </section>
 
-    <div class="services-grid">
 
-      <!-- Service 1: Whitening -->
-      <article class="service-card reveal" tabindex="0" aria-label="Teeth Whitening service">
-        <div class="service-icon" aria-hidden="true">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--primary-dark)" stroke-width="2" stroke-linecap="round">
-            <path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/>
-          </svg>
+  <!-- ================================================================
+     TESTIMONIALS SECTION
+================================================================ -->
+  <section id="testimonials" aria-labelledby="testimonials-heading">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-tag">💬 Patient Stories</div>
+        <h2 class="section-title" id="testimonials-heading">What Our <em>Patients Say</em></h2>
+        <p class="section-subtitle">Real stories from real patients who trusted us with their smiles.</p>
+      </div>
+
+      <div class="testimonials-carousel" role="region" aria-label="Patient testimonials carousel" aria-live="polite">
+        <div class="testimonial-slides" id="testimonial-slides">
+
+          <div class="testimonial-slide active" role="tabpanel" aria-label="Testimonial 1 of 5">
+            <div class="testimonial-card">
+              <div class="testimonial-quote" aria-hidden="true">"</div>
+              <div class="stars" aria-label="5 star rating">★★★★★</div>
+              <p class="testimonial-text">I was terrified of dentists for years, but DentalArtCare completely changed
+                that. Dr. Chen was so patient and gentle. My braces journey was actually enjoyable! My smile is now
+                perfect.</p>
+              <div class="testimonial-author">
+                <div class="author-avatar" style="background:linear-gradient(135deg,#4FC3F7,#81C784)"
+                  aria-hidden="true">JM</div>
+                <div class="author-info">
+                  <h4>Jessica Martinez</h4>
+                  <p>Marketing Manager · Orthodontics Patient</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-slide" role="tabpanel" aria-label="Testimonial 2 of 5" aria-hidden="true">
+            <div class="testimonial-card">
+              <div class="testimonial-quote" aria-hidden="true">"</div>
+              <div class="stars" aria-label="5 star rating">★★★★★</div>
+              <p class="testimonial-text">Dr. Torres gave me back my confidence with dental implants. After losing a
+                tooth in an accident, I thought I'd never smile freely again. The procedure was painless and the results
+                are stunning.</p>
+              <div class="testimonial-author">
+                <div class="author-avatar" style="background:linear-gradient(135deg,#0288D1,#4FC3F7)"
+                  aria-hidden="true">RP</div>
+                <div class="author-info">
+                  <h4>Robert Palmer</h4>
+                  <p>Architect · Implant Patient</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-slide" role="tabpanel" aria-label="Testimonial 3 of 5" aria-hidden="true">
+            <div class="testimonial-card">
+              <div class="testimonial-quote" aria-hidden="true">"</div>
+              <div class="stars" aria-label="5 star rating">★★★★★</div>
+              <p class="testimonial-text">The whitening treatment was incredible! I went 7 shades lighter in one visit.
+                Dr. Sharma is an artist. The entire team was warm and professional. I now recommend DentalArtCare to
+                everyone I know.</p>
+              <div class="testimonial-author">
+                <div class="author-avatar" style="background:linear-gradient(135deg,#81C784,#388E3C)"
+                  aria-hidden="true">AL</div>
+                <div class="author-info">
+                  <h4>Amanda Lee</h4>
+                  <p>Teacher · Whitening Patient</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-slide" role="tabpanel" aria-label="Testimonial 4 of 5" aria-hidden="true">
+            <div class="testimonial-card">
+              <div class="testimonial-quote" aria-hidden="true">"</div>
+              <div class="stars" aria-label="4 star rating">★★★★★</div>
+              <p class="testimonial-text">I had a root canal that I was dreading for months. The DentalArtCare team made
+                the whole experience so easy. I barely felt a thing. Modern dentistry is amazing when you're in the
+                right hands.</p>
+              <div class="testimonial-author">
+                <div class="author-avatar" style="background:linear-gradient(135deg,#F59E0B,#EF4444)"
+                  aria-hidden="true">DK</div>
+                <div class="author-info">
+                  <h4>David Kim</h4>
+                  <p>Software Engineer · Root Canal Patient</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-slide" role="tabpanel" aria-label="Testimonial 5 of 5" aria-hidden="true">
+            <div class="testimonial-card">
+              <div class="testimonial-quote" aria-hidden="true">"</div>
+              <div class="stars" aria-label="5 star rating">★★★★★</div>
+              <p class="testimonial-text">My porcelain veneers look completely natural — everyone thinks they're my real
+                teeth! Dr. Sharma spent hours planning the perfect shape for my face. Worth every penny. I smile in
+                every photo now.</p>
+              <div class="testimonial-author">
+                <div class="author-avatar" style="background:linear-gradient(135deg,#EC4899,#8B5CF6)"
+                  aria-hidden="true">SN</div>
+                <div class="author-info">
+                  <h4>Sofia Nguyen</h4>
+                  <p>Photographer · Veneers Patient</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /testimonial-slides -->
+
+        <!-- Controls -->
+        <div class="carousel-dots" role="tablist" aria-label="Testimonial navigation" id="carousel-dots">
+          <button class="carousel-dot active" role="tab" aria-selected="true" aria-label="Go to testimonial 1"
+            data-index="0"></button>
+          <button class="carousel-dot" role="tab" aria-selected="false" aria-label="Go to testimonial 2"
+            data-index="1"></button>
+          <button class="carousel-dot" role="tab" aria-selected="false" aria-label="Go to testimonial 3"
+            data-index="2"></button>
+          <button class="carousel-dot" role="tab" aria-selected="false" aria-label="Go to testimonial 4"
+            data-index="3"></button>
+          <button class="carousel-dot" role="tab" aria-selected="false" aria-label="Go to testimonial 5"
+            data-index="4"></button>
         </div>
-        <h3>Teeth Whitening</h3>
-        <p>Brighten your smile up to 8 shades with our professional in-office whitening treatment. Fast, safe, and long-lasting results.</p>
-        <a href="#booking" class="service-link" aria-label="Book Teeth Whitening appointment">
-          Book Now <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
-      </article>
 
-      <!-- Service 2: Implants -->
-      <article class="service-card reveal" tabindex="0" aria-label="Dental Implants service">
-        <div class="service-icon" aria-hidden="true">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--primary-dark)" stroke-width="2" stroke-linecap="round">
-            <circle cx="12" cy="8" r="4"/>
-            <path d="M12 12v10M9 16h6M10 20h4"/>
-          </svg>
+        <div class="carousel-arrows">
+          <button class="carousel-arrow" id="carousel-prev" aria-label="Previous testimonial">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" aria-hidden="true">
+              <path d="M15 18l-6-6 6-6" />
+            </svg>
+          </button>
+          <button class="carousel-arrow" id="carousel-next" aria-label="Next testimonial">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" aria-hidden="true">
+              <path d="M9 18l6-6-6-6" />
+            </svg>
+          </button>
         </div>
-        <h3>Dental Implants</h3>
-        <p>Replace missing teeth with titanium implants that look, feel, and function exactly like natural teeth. A permanent solution for a confident smile.</p>
-        <a href="#booking" class="service-link" aria-label="Book Dental Implants appointment">
+
+      </div><!-- /testimonials-carousel -->
+    </div>
+  </section>
+
+  <!-- ================================================================
+     BOOKING FORM SECTION
+================================================================ -->
+  <section id="booking" aria-labelledby="booking-heading">
+    <div class="container">
+      <div class="booking-inner">
+
+        <!-- Info -->
+        <div class="booking-info reveal">
+          <div class="section-tag">📅 Schedule Visit</div>
+          <h2 id="booking-heading">Book Your <em style="font-style:italic;color:var(--primary-dark)">Appointment</em>
+          </h2>
+          <p>Take the first step toward your perfect smile. Our friendly team will confirm your booking within 2 hours
+            and prepare everything you need for a smooth visit.</p>
+
+          <div class="booking-benefits">
+            <div class="benefit-item">
+              <div class="benefit-icon">⚡</div>
+              <div class="benefit-text">
+                <h4>Quick Confirmation</h4>
+                <p>Receive confirmation within 2 hours</p>
+              </div>
+            </div>
+            <div class="benefit-item">
+              <div class="benefit-icon">🔒</div>
+              <div class="benefit-text">
+                <h4>No Upfront Payment</h4>
+                <p>Pay only after your consultation</p>
+              </div>
+            </div>
+            <div class="benefit-item">
+              <div class="benefit-icon">🔄</div>
+              <div class="benefit-text">
+                <h4>Free Rescheduling</h4>
+                <p>Change your appointment anytime, free</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Form -->
+        <div class="booking-form reveal" role="form" aria-label="Appointment booking form">
+          <!-- Success overlay -->
+          <div class="form-success" id="form-success" aria-live="polite" role="alert">
+            <div class="checkmark-wrap">
+              <svg class="checkmark-svg" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true">
+                <circle class="checkmark-circle" cx="26" cy="26" r="24" />
+                <path class="checkmark-check" d="M14 27l8 8 16-16" />
+              </svg>
+            </div>
+            <h3>Appointment Requested!</h3>
+            <p>Thank you! We'll confirm your appointment within 2 hours. Check your email for details.</p>
+            <button class="btn btn-primary" id="reset-form-btn" style="margin-top:0.5rem">Book Another</button>
+          </div>
+
+          <form id="appointment-form" novalidate aria-label="Appointment request form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="field-name">Full Name <span class="req" aria-hidden="true">*</span></label>
+                <input type="text" id="field-name" name="name" class="form-control" placeholder="John Smith"
+                  autocomplete="name" aria-required="true" aria-describedby="name-error" />
+                <div class="form-error" id="name-error" role="alert" aria-live="polite">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    aria-hidden="true">
+                    <circle cx="12" cy="12" r="10" />
+                    <line x1="12" y1="8" x2="12" y2="12" />
+                    <line x1="12" y1="16" x2="12.01" y2="16" />
+                  </svg>
+                  Please enter your full name
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="field-phone">Phone Number <span class="req" aria-hidden="true">*</span></label>
+                <input type="tel" id="field-phone" name="phone" class="form-control" placeholder="+1 (555) 000-0000"
+                  autocomplete="tel" aria-required="true" aria-describedby="phone-error" />
+                <div class="form-error" id="phone-error" role="alert" aria-live="polite">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    aria-hidden="true">
+                    <circle cx="12" cy="12" r="10" />
+                    <line x1="12" y1="8" x2="12" y2="12" />
+                    <line x1="12" y1="16" x2="12.01" y2="16" />
+                  </svg>
+                  Please enter a valid phone number
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="field-email">Email Address <span class="req" aria-hidden="true">*</span></label>
+              <input type="email" id="field-email" name="email" class="form-control" placeholder="john@example.com"
+                autocomplete="email" aria-required="true" aria-describedby="email-error" />
+              <div class="form-error" id="email-error" role="alert" aria-live="polite">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  aria-hidden="true">
+                  <circle cx="12" cy="12" r="10" />
+                  <line x1="12" y1="8" x2="12" y2="12" />
+                  <line x1="12" y1="16" x2="12.01" y2="16" />
+                </svg>
+                Please enter a valid email address
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="field-service">Service Needed <span class="req" aria-hidden="true">*</span></label>
+                <select id="field-service" name="service" class="form-control" aria-required="true"
+                  aria-describedby="service-error">
+                  <option value="" disabled selected>Select a service</option>
+                  <option value="whitening">Teeth Whitening</option>
+                  <option value="implants">Dental Implants</option>
+                  <option value="braces">Braces & Orthodontics</option>
+                  <option value="root-canal">Root Canal Therapy</option>
+                  <option value="cleaning">Professional Cleaning</option>
+                  <option value="veneers">Porcelain Veneers</option>
+                  <option value="consultation">General Consultation</option>
+                </select>
+                <div class="form-error" id="service-error" role="alert" aria-live="polite">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    aria-hidden="true">
+                    <circle cx="12" cy="12" r="10" />
+                    <line x1="12" y1="8" x2="12" y2="12" />
+                    <line x1="12" y1="16" x2="12.01" y2="16" />
+                  </svg>
+                  Please select a service
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="field-date">Preferred Date <span class="req" aria-hidden="true">*</span></label>
+                <input type="date" id="field-date" name="date" class="form-control" aria-required="true"
+                  aria-describedby="date-error" />
+                <div class="form-error" id="date-error" role="alert" aria-live="polite">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    aria-hidden="true">
+                    <circle cx="12" cy="12" r="10" />
+                    <line x1="12" y1="8" x2="12" y2="12" />
+                    <line x1="12" y1="16" x2="12.01" y2="16" />
+                  </svg>
+                  Please select a future date
+                </div>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary form-submit-btn" id="submit-btn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" aria-hidden="true">
+                <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" />
+              </svg>
+              Request Appointment
+            </button>
+          </form>
+        </div>
+
+      </div><!-- /booking-inner -->
+    </div>
+  </section>
+
+  <!-- ================================================================
+     FOOTER
+================================================================ -->
+  <footer id="footer" role="contentinfo" aria-label="DentalArtCare footer">
+    <div class="container">
+      <div class="footer-grid">
+
+        <!-- Brand + social -->
+        <div class="footer-brand">
+          <a href="#hero" class="nav-logo" aria-label="DentalArtCare — back to top">
+            <svg width="28" height="28" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+              <path
+                d="M16 5C11 5 8 9 8 13C8 16 9.5 18 9.5 21.5C9.5 25 10.5 27 13 27C15 27 15.5 23 16 23C16.5 23 17 27 19 27C21.5 27 22.5 25 22.5 21.5C22.5 18 24 16 24 13C24 9 21 5 16 5Z"
+                fill="url(#footerGrad)" />
+              <defs>
+                <linearGradient id="footerGrad" x1="8" y1="5" x2="24" y2="27" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#4FC3F7" />
+                  <stop offset="1" stop-color="#81C784" />
+                </linearGradient>
+              </defs>
+            </svg>
+            DentalArt<span>Care</span>
+          </a>
+          <p class="footer-desc">Your trusted partner in dental health and cosmetic dentistry. We combine clinical
+            excellence with genuine compassion to give you the smile you deserve.</p>
+          <div class="footer-social">
+            <a href="#" class="footer-social-link" aria-label="DentalArtCare on Facebook">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
+              </svg>
+            </a>
+            <a href="#" class="footer-social-link" aria-label="DentalArtCare on Instagram">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                aria-hidden="true">
+                <rect x="2" y="2" width="20" height="20" rx="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" />
+              </svg>
+            </a>
+            <a href="#" class="footer-social-link" aria-label="DentalArtCare on Twitter">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z" />
+              </svg>
+            </a>
+            <a href="#" class="footer-social-link" aria-label="DentalArtCare on YouTube">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 00-1.95 1.96A29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.95A29 29 0 0023 12a29 29 0 00-.46-5.58zM9.75 15.02V8.98L15.5 12l-5.75 3.02z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Contact + Hours -->
+        <div class="footer-col">
+          <h4>Contact & Hours</h4>
+          <div class="footer-contact-item">
+            <div class="icon" aria-hidden="true">📍</div>
+            <div class="text">
+              <strong>Address</strong>
+              123 Dental Boulevard, Suite 200<br>New York, NY 10001
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <div class="icon" aria-hidden="true">📞</div>
+            <div class="text">
+              <strong>Phone</strong>
+              <a href="tel:+12125550199" style="color:inherit">+1 (212) 555-0199</a>
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <div class="icon" aria-hidden="true">✉️</div>
+            <div class="text">
+              <strong>Email</strong>
+              <a href="mailto:hello@dentalartcare.com" style="color:inherit">hello@dentalartcare.com</a>
+            </div>
+          </div>
+          <div class="hours-grid" style="margin-top:1rem">
+            <div class="hours-row"><span class="day">Mon – Fri</span><span class="time open">8:00 – 18:00</span></div>
+            <div class="hours-row"><span class="day">Saturday</span><span class="time open">9:00 – 16:00</span></div>
+            <div class="hours-row"><span class="day">Sunday</span><span class="time"
+                style="color:rgba(255,255,255,0.4)">Closed</span></div>
+            <div class="hours-row"><span class="day">Emergencies</span><span class="time"
+                style="color:var(--primary)">24/7 On-Call</span></div>
+          </div>
+        </div>
+
+        <!-- Quick links -->
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <nav class="footer-links" aria-label="Footer navigation">
+            <a href="#services">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                aria-hidden="true">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+              Our Services
+            </a>
+            <a href="#team">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                aria-hidden="true">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+              Meet the Team
+            </a>
+            <a href="#testimonials">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                aria-hidden="true">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+              Patient Reviews
+            </a>
+            <a href="#booking">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                aria-hidden="true">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+              Book Appointment
+            </a>
+            <a href="#">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                aria-hidden="true">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+              Patient Portal
+            </a>
+            <a href="#">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                aria-hidden="true">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+              Insurance Info
+            </a>
+            <a href="#">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                aria-hidden="true">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+              Blog & Tips
+            </a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2025 DentalArtCare. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Accessibility</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================================================================
+     JAVASCRIPT
+================================================================ -->
+  <script src="script.js" defer></script>
+</body>
+
+</html>
