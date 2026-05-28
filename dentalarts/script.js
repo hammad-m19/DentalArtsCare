@@ -6,7 +6,7 @@ function addRipple(e) {
   const rect = btn.getBoundingClientRect();
   const size = Math.max(rect.width, rect.height);
   const x = e.clientX - rect.left - size / 2;
-  const y = e.clientY - rect.top  - size / 2;
+  const y = e.clientY - rect.top - size / 2;
 
   const ripple = document.createElement('span');
   ripple.classList.add('ripple');
@@ -54,8 +54,8 @@ updateNavbar();
    Hamburger / mobile nav
 ---------------------------------------------------------------- */
 const hamburgerBtn = document.getElementById('hamburger-btn');
-const navMobile    = document.getElementById('nav-mobile-menu');
-let mobileNavOpen  = false;
+const navMobile = document.getElementById('nav-mobile-menu');
+let mobileNavOpen = false;
 
 function toggleMobileNav() {
   mobileNavOpen = !mobileNavOpen;
@@ -82,7 +82,7 @@ document.querySelectorAll('.mobile-nav-link').forEach(link => {
 ---------------------------------------------------------------- */
 (function initParticles() {
   const canvas = document.getElementById('hero-canvas');
-  const ctx    = canvas.getContext('2d');
+  const ctx = canvas.getContext('2d');
   let W, H, particles;
   const COUNT = 55;
 
@@ -90,11 +90,11 @@ document.querySelectorAll('.mobile-nav-link').forEach(link => {
     constructor() { this.reset(true); }
 
     reset(init = false) {
-      this.x    = Math.random() * W;
-      this.y    = init ? Math.random() * H : H + 10;
-      this.r    = Math.random() * 2.5 + 0.8;
-      this.vx   = (Math.random() - 0.5) * 0.35;
-      this.vy   = -(Math.random() * 0.45 + 0.15);
+      this.x = Math.random() * W;
+      this.y = init ? Math.random() * H : H + 10;
+      this.r = Math.random() * 2.5 + 0.8;
+      this.vx = (Math.random() - 0.5) * 0.35;
+      this.vy = -(Math.random() * 0.45 + 0.15);
       this.life = 0;
       this.maxLife = Math.random() * 250 + 150;
       this.color = Math.random() < 0.6 ? '79,195,247' : '129,199,132';
@@ -117,7 +117,7 @@ document.querySelectorAll('.mobile-nav-link').forEach(link => {
   }
 
   function resize() {
-    W = canvas.width  = canvas.parentElement.offsetWidth;
+    W = canvas.width = canvas.parentElement.offsetWidth;
     H = canvas.height = canvas.parentElement.offsetHeight;
   }
 
@@ -159,8 +159,8 @@ document.querySelectorAll('.reveal').forEach((el, i) => {
   // Delay grid children by their index within their parent
   const parent = el.parentElement;
   if (parent && (parent.classList.contains('services-grid') ||
-                 parent.classList.contains('stats-grid') ||
-                 parent.classList.contains('team-grid'))) {
+    parent.classList.contains('stats-grid') ||
+    parent.classList.contains('team-grid'))) {
     const siblings = Array.from(parent.querySelectorAll('.reveal'));
     const idx = siblings.indexOf(el);
     el.style.transitionDelay = `${idx * 0.1}s`;
@@ -176,17 +176,17 @@ function easeOutExpo(t) {
 }
 
 function animateCounter(el) {
-  const target   = parseFloat(el.dataset.target);
-  const suffix   = el.dataset.suffix || '';
-  const decimal  = parseInt(el.dataset.decimal || '0');
+  const target = parseFloat(el.dataset.target);
+  const suffix = el.dataset.suffix || '';
+  const decimal = parseInt(el.dataset.decimal || '0');
   const duration = 1800; // ms
-  let   startTime = null;
+  let startTime = null;
 
   function step(timestamp) {
     if (!startTime) startTime = timestamp;
     const progress = Math.min((timestamp - startTime) / duration, 1);
-    const eased    = easeOutExpo(progress);
-    const value    = eased * target;
+    const eased = easeOutExpo(progress);
+    const value = eased * target;
 
     el.textContent = (decimal > 0 ? value.toFixed(decimal) : Math.floor(value)) + suffix;
 
@@ -230,13 +230,13 @@ document.querySelectorAll('.team-card').forEach(card => {
    Testimonials Carousel — auto-play, dot indicators, swipe
 ---------------------------------------------------------------- */
 (function initCarousel() {
-  const slides    = document.querySelectorAll('.testimonial-slide');
-  const dots      = document.querySelectorAll('.carousel-dot');
-  const prevBtn   = document.getElementById('carousel-prev');
-  const nextBtn   = document.getElementById('carousel-next');
-  let   current   = 0;
-  let   autoTimer = null;
-  const DELAY     = 5000;
+  const slides = document.querySelectorAll('.testimonial-slide');
+  const dots = document.querySelectorAll('.carousel-dot');
+  const prevBtn = document.getElementById('carousel-prev');
+  const nextBtn = document.getElementById('carousel-next');
+  let current = 0;
+  let autoTimer = null;
+  const DELAY = 4400;
 
   function goTo(index) {
     // Deactivate current
@@ -300,13 +300,13 @@ document.querySelectorAll('.team-card').forEach(card => {
    Booking Form — validation + success animation
 ---------------------------------------------------------------- */
 (function initForm() {
-  const form       = document.getElementById('appointment-form');
+  const form = document.getElementById('appointment-form');
   const successBox = document.getElementById('form-success');
-  const resetBtn   = document.getElementById('reset-form-btn');
+  const resetBtn = document.getElementById('reset-form-btn');
 
   // Set min date to today
   const dateField = document.getElementById('field-date');
-  const today     = new Date().toISOString().split('T')[0];
+  const today = new Date().toISOString().split('T')[0];
   dateField.setAttribute('min', today);
 
   function showError(fieldId, errorId) {
@@ -326,11 +326,11 @@ document.querySelectorAll('.team-card').forEach(card => {
   function validate() {
     let valid = true;
 
-    const name  = document.getElementById('field-name').value.trim();
+    const name = document.getElementById('field-name').value.trim();
     const phone = document.getElementById('field-phone').value.trim();
     const email = document.getElementById('field-email').value.trim();
-    const svc   = document.getElementById('field-service').value;
-    const date  = document.getElementById('field-date').value;
+    const svc = document.getElementById('field-service').value;
+    const date = document.getElementById('field-date').value;
 
     if (!name || name.length < 2) {
       showError('field-name', 'name-error');
@@ -371,8 +371,8 @@ document.querySelectorAll('.team-card').forEach(card => {
 
     // Trigger checkmark animation
     const circle = successBox.querySelector('.checkmark-circle');
-    const check  = successBox.querySelector('.checkmark-check');
-    const wrap   = successBox.querySelector('.checkmark-svg');
+    const check = successBox.querySelector('.checkmark-check');
+    const wrap = successBox.querySelector('.checkmark-svg');
     wrap.classList.add('checkmark-animate');
 
     // Scroll to success
@@ -394,7 +394,7 @@ document.querySelectorAll('.team-card').forEach(card => {
    Smooth anchor scroll (enhance default behaviour)
 ---------------------------------------------------------------- */
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function(e) {
+  anchor.addEventListener('click', function (e) {
     const target = document.querySelector(this.getAttribute('href'));
     if (target) {
       e.preventDefault();

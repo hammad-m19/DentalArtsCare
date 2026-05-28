@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="DentalArtCare — Meet our full team of board-certified dental specialists. Expert orthodontists, implant specialists, cosmetic dentists & more." />
+  <title>Our Doctors — DentalArtCare</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    /* ============================================================
+       DOCTORS PAGE — Extra Styles
+    ============================================================ */
+
+    /* Page hero banner */
+    .doctors-hero {
+      background: linear-gradient(160deg, #f0f9ff 0%, #e8f5f9 40%, #fafffe 100%);
+      padding: 8rem 0 4rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .doctors-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 20% 50%, rgba(79, 195, 247, 0.08) 0%, transparent 60%),
+        radial-gradient(ellipse at 80% 50%, rgba(129, 199, 132, 0.06) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    .doctors-hero-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .doctors-hero .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(79, 195, 247, 0.12);
+      border: 1px solid rgba(79, 195, 247, 0.3);
+      color: var(--primary-dark);
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      padding: 0.4rem 1rem;
+      border-radius: var(--radius-btn);
+      margin-bottom: 1.5rem;
+    }
+
+    .doctors-hero h1 {
+      font-family: var(--font-heading);
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      font-weight: 700;
+      color: var(--dark);
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+
+    .doctors-hero h1 em {
+      font-style: italic;
+      color: var(--primary-dark);
+    }
+
+    .doctors-hero p {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      max-width: 560px;
+      margin: 0 auto 2rem;
+      line-height: 1.7;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--primary-dark);
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-decoration: none;
+      margin-bottom: 2rem;
+      transition: gap var(--transition);
+    }
+
+    .back-link:hover {
+      gap: 0.8rem;
+    }
+
+    /* Full doctors grid — 3 columns, expands */
+    #all-doctors {
+      padding: 5rem 0 7rem;
+      background: var(--surface-2);
+    }
+
+    .all-doctors-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    /* Filter bar */
+    .filter-bar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      margin-bottom: 3rem;
+    }
+
+    .filter-btn {
+      padding: 0.45rem 1.2rem;
+      border-radius: var(--radius-btn);
+      border: 1.5px solid var(--border);
+      background: var(--surface);
+      color: var(--text-muted);
+      font-size: 0.825rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all var(--transition);
+      font-family: var(--font-body);
+    }
+
+    .filter-btn:hover,
+    .filter-btn.active {
+      background: var(--primary);
+      border-color: var(--primary);
+      color: #fff;
+    }
+
+    /* Count badge */
+    .doctors-count {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    .doctors-count strong {
+      color: var(--primary-dark);
+    }
+
+    @media (max-width: 1024px) {
+      .all-doctors-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .all-doctors-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin: 0 auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ================================================================
+       PAGE LOADER
+  ================================================================ -->
+  <div id="page-loader" role="status" aria-label="Loading DentalArtCare">
+    <svg class="loader-tooth" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path
+        d="M30 8C20 8 14 15 14 22C14 27 16 30 16 36C16 42 18 52 22 52C26 52 27 44 30 44C33 44 34 52 38 52C42 52 44 42 44 36C44 30 46 27 46 22C46 15 40 8 30 8Z" />
+    </svg>
+    <p class="loader-text">DentalArtCare</p>
+  </div>
+
+  <!-- ================================================================
+       NAVBAR
+  ================================================================ -->
+  <header id="navbar" role="banner">
+    <div class="container">
+      <nav class="nav-inner" aria-label="Main navigation">
+        <a href="index.html" class="nav-logo" aria-label="DentalArtCare — Home">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+            <circle cx="16" cy="16" r="15" fill="url(#logoGrad)" opacity="0.15" />
+            <path
+              d="M16 5C11 5 8 9 8 13C8 16 9.5 18 9.5 21.5C9.5 25 10.5 27 13 27C15 27 15.5 23 16 23C16.5 23 17 27 19 27C21.5 27 22.5 25 22.5 21.5C22.5 18 24 16 24 13C24 9 21 5 16 5Z"
+              fill="url(#logoGrad)" />
+            <defs>
+              <linearGradient id="logoGrad" x1="8" y1="5" x2="24" y2="27" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#4FC3F7" />
+                <stop offset="1" stop-color="#81C784" />
+              </linearGradient>
+            </defs>
+          </svg>
+          DentalArt<span>Care</span>
+        </a>
+
+        <!-- Desktop nav links -->
+        <ul class="nav-links" role="list">
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="doctors.html" style="color:var(--primary-dark)">Our Team</a></li>
+          <li><a href="index.html#testimonials">Testimonials</a></li>
+          <li><a href="index.html#booking" class="btn btn-primary nav-cta">Book Appointment</a></li>
+        </ul>
+
+        <!-- Mobile hamburger -->
+        <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false"
+          aria-controls="nav-mobile-menu" id="hamburger-btn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile nav drawer -->
+  <nav class="nav-mobile" id="nav-mobile-menu" aria-label="Mobile navigation" aria-hidden="true">
+    <a href="index.html#services" class="mobile-nav-link">Services</a>
+    <a href="doctors.html" class="mobile-nav-link">Our Team</a>
+    <a href="index.html#testimonials" class="mobile-nav-link">Testimonials</a>
+    <a href="index.html#booking" class="mobile-nav-link">Book Now</a>
+  </nav>
+
+  <!-- ================================================================
+       DOCTORS HERO
+  ================================================================ -->
+  <div class="doctors-hero">
+    <div class="container">
+      <div class="doctors-hero-content">
+        <a href="index.html#team" class="back-link" aria-label="Back to homepage">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" aria-hidden="true">
+            <path d="M19 12H5M12 5l-7 7 7 7" />
+          </svg>
+          Back to Home
+        </a>
+
+        <div class="hero-badge">
+          👨‍⚕️ Our Specialists
+        </div>
+
+        <h1>Meet Our <em>Expert Team</em></h1>
+
+        <p>Our board-certified dentists bring decades of combined expertise and genuine care to every patient
+          interaction. Each specialist is dedicated to delivering the highest standard of dental care.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================================================================
+       ALL DOCTORS SECTION
+  ================================================================ -->
+  <section id="all-doctors" aria-labelledby="all-doctors-heading">
+    <div class="container">
+      <h2 id="all-doctors-heading" class="sr-only">All Doctors</h2>
+
+      <!-- Filter Bar -->
+      <div class="filter-bar" role="group" aria-label="Filter doctors by specialty">
+        <button class="filter-btn active" data-filter="all">All Specialists</button>
+        <button class="filter-btn" data-filter="orthodontics">Orthodontics</button>
+        <button class="filter-btn" data-filter="implants">Implants</button>
+        <button class="filter-btn" data-filter="cosmetic">Cosmetic</button>
+        <button class="filter-btn" data-filter="surgery">Oral Surgery</button>
+        <button class="filter-btn" data-filter="pediatric">Pediatric</button>
+        <button class="filter-btn" data-filter="endodontics">Endodontics</button>
+      </div>
+
+      <p class="doctors-count" id="doctors-count">Showing <strong>9</strong> specialists</p>
+
+      <div class="team-grid all-doctors-grid" id="doctors-grid">
+
+        <!-- =================== DR. SARAH CHEN =================== -->
+        <div class="team-card reveal" tabindex="0" aria-label="Dr. Sarah Chen — hover or press Enter to learn more"
+          role="button" data-specialty="orthodontics">
+          <div class="team-card-inner">
+            <div class="team-front">
+              <div class="team-avatar">
+                <div class="avatar-gradient">
+                  <div class="avatar-bg-pattern"></div>
+                  <div class="avatar-figure" style="background: linear-gradient(160deg,#4FC3F7 0%,#81C784 100%)">
+                    <div class="avatar-head"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="team-info">
+                <div class="team-name">Dr. Sarah Chen</div>
+                <div class="team-title">Lead Orthodontist</div>
+                <div class="team-specialties">
+                  <span class="specialty-tag">Braces</span>
+                  <span class="specialty-tag">Clear Aligners</span>
+                  <span class="specialty-tag">Jaw Surgery</span>
+                </div>
+                <p class="flip-hint" aria-hidden="true">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4" />
+                  </svg>
+                  Hover to see bio
+                </p>
+              </div>
+            </div>
+            <div class="team-back" aria-hidden="true">
+              <div class="team-back-avatar">SC</div>
+              <h3>Dr. Sarah Chen</h3>
+              <p class="title">Lead Orthodontist</p>
+              <p class="bio">With 12 years of clinical excellence, Dr. Chen has transformed over 3,000 smiles. She graduated summa cum laude from Johns Hopkins and is a fellow of the American Association of Orthodontists.</p>
+              <div class="social-links">
+                <a href="#" class="social-icon-btn" aria-label="Dr. Chen's LinkedIn">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2zM4 6a2 2 0 110-4 2 2 0 010 4z" /></svg>
+                </a>
+                <a href="#" class="social-icon-btn" aria-label="Dr. Chen's email">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" /><polyline points="22,6 12,13 2,6" /></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- =================== DR. MICHAEL TORRES =================== -->
+        <div class="team-card reveal" tabindex="0" aria-label="Dr. Michael Torres — hover or press Enter to learn more"
+          role="button" data-specialty="implants surgery">
+          <div class="team-card-inner">
+            <div class="team-front">
+              <div class="team-avatar">
+                <div class="avatar-gradient">
+                  <div class="avatar-bg-pattern"></div>
+                  <div class="avatar-figure" style="background: linear-gradient(160deg,#0288D1 0%,#4FC3F7 100%)">
+                    <div class="avatar-head"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="team-info">
+                <div class="team-name">Dr. Michael Torres</div>
+                <div class="team-title">Implant Specialist</div>
+                <div class="team-specialties">
+                  <span class="specialty-tag">Implants</span>
+                  <span class="specialty-tag">Bone Grafting</span>
+                  <span class="specialty-tag">Oral Surgery</span>
+                </div>
+                <p class="flip-hint" aria-hidden="true">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4" />
+                  </svg>
+                  Hover to see bio
+                </p>
+              </div>
+            </div>
+            <div class="team-back" aria-hidden="true">
+              <div class="team-back-avatar" style="background:linear-gradient(135deg,#0288D1,#4FC3F7)">MT</div>
+              <h3>Dr. Michael Torres</h3>
+              <p class="title">Implant Specialist</p>
+              <p class="bio">Dr. Torres is internationally recognized for his minimally invasive implant techniques. He has placed over 8,000 implants and regularly lectures at dental conferences worldwide.</p>
+              <div class="social-links">
+                <a href="#" class="social-icon-btn" aria-label="Dr. Torres's LinkedIn">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2zM4 6a2 2 0 110-4 2 2 0 010 4z" /></svg>
+                </a>
+                <a href="#" class="social-icon-btn" aria-label="Dr. Torres's email">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" /><polyline points="22,6 12,13 2,6" /></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- =================== DR. PRIYA SHARMA =================== -->
+        <div class="team-card reveal" tabindex="0" aria-label="Dr. Priya Sharma — hover or press Enter to learn more"
+          role="button" data-specialty="cosmetic">
+          <div class="team-card-inner">
+            <div class="team-front">
+              <div class="team-avatar">
+                <div class="avatar-gradient">
+                  <div class="avatar-bg-pattern"></div>
+                  <div class="avatar-figure" style="background: linear-gradient(160deg,#81C784 0%,#388E3C 100%)">
+                    <div class="avatar-head"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="team-info">
+                <div class="team-name">Dr. Priya Sharma</div>
+                <div class="team-title">Cosmetic Dentist</div>
+                <div class="team-specialties">
+                  <span class="specialty-tag">Veneers</span>
+                  <span class="specialty-tag">Whitening</span>
+                  <span class="specialty-tag">Smile Design</span>
+                </div>
+                <p class="flip-hint" aria-hidden="true">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4" />
+                  </svg>
+                  Hover to see bio
+                </p>
+              </div>
+            </div>
+            <div class="team-back" aria-hidden="true">
+              <div class="team-back-avatar" style="background:linear-gradient(135deg,#81C784,#388E3C)">PS</div>
+              <h3>Dr. Priya Sharma</h3>
+              <p class="title">Cosmetic Dentist</p>
+              <p class="bio">A true artist of the smile, Dr. Sharma combines aesthetic precision with cutting-edge dental techniques. Her smile makeovers have been featured in top dental publications globally.</p>
+              <div class="social-links">
+                <a href="#" class="social-icon-btn" aria-label="Dr. Sharma's LinkedIn">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2zM4 6a2 2 0 110-4 2 2 0 010 4z" /></svg>
+                </a>
+                <a href="#" class="social-icon-btn" aria-label="Dr. Sharma's email">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" /><polyline points="22,6 12,13 2,6" /></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- =================== DR. JAMES WILKINSON =================== -->
+        <div class="team-card reveal" tabindex="0" aria-label="Dr. James Wilkinson — hover or press Enter to learn more"
+          role="button" data-specialty="surgery">
+          <div class="team-card-inner">
+            <div class="team-front">
+              <div class="team-avatar">
+                <div class="avatar-gradient">
+                  <div class="avatar-bg-pattern"></div>
+                  <div class="avatar-figure" style="background: linear-gradient(160deg,#F59E0B 0%,#D97706 100%)">
+                    <div class="avatar-head"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="team-info">
+                <div class="team-name">Dr. James Wilkinson</div>
+                <div class="team-title">Oral & Maxillofacial Surgeon</div>
+                <div class="team-specialties">
+                  <span class="specialty-tag">Wisdom Teeth</span>
+                  <span class="specialty-tag">Jaw Surgery</span>
+                  <span class="specialty-tag">Reconstruction</span>
+                </div>
+                <p class="flip-hint" aria-hidden="true">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4" />
+                  </svg>
+                  Hover to see bio
+                </p>
+              </div>
+            </div>
+            <div class="team-back" aria-hidden="true">
+              <div class="team-back-avatar" style="background:linear-gradient(135deg,#F59E0B,#D97706)">JW</div>
+              <h3>Dr. James Wilkinson</h3>
+              <p class="title">Oral & Maxillofacial Surgeon</p>
+              <p class="bio">Dr. Wilkinson is a fellowship-trained oral and maxillofacial surgeon with 18 years of experience. He specialises in complex extractions, corrective jaw surgery, and facial trauma reconstruction.</p>
+              <div class="social-links">
+                <a href="#" class="social-icon-btn" aria-label="Dr. Wilkinson's LinkedIn">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2zM4 6a2 2 0 110-4 2 2 0 010 4z" /></svg>
+                </a>
+                <a href="#" class="social-icon-btn" aria-label="Dr. Wilkinson's email">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" /><polyline points="22,6 12,13 2,6" /></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- =================== DR. AMARA OSEI =================== -->
+        <div class="team-card reveal" tabindex="0" aria-label="Dr. Amara Osei — hover or press Enter to learn more"
+          role="button" data-specialty="pediatric">
+          <div class="team-card-inner">
+            <div class="team-front">
+              <div class="team-avatar">
+                <div class="avatar-gradient">
+                  <div class="avatar-bg-pattern"></div>
+                  <div class="avatar-figure" style="background: linear-gradient(160deg,#EC4899 0%,#8B5CF6 100%)">
+                    <div class="avatar-head"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="team-info">
+                <div class="team-name">Dr. Amara Osei</div>
+                <div class="team-title">Pediatric Dentist</div>
+                <div class="team-specialties">
+                  <span class="specialty-tag">Children's Care</span>
+                  <span class="specialty-tag">Preventive</span>
+                  <span class="specialty-tag">Sedation</span>
+                </div>
+                <p class="flip-hint" aria-hidden="true">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4" />
+                  </svg>
+                  Hover to see bio
+                </p>
+              </div>
+            </div>
+            <div class="team-back" aria-hidden="true">
+              <div class="team-back-avatar" style="background:linear-gradient(135deg,#EC4899,#8B5CF6)">AO</div>
+              <h3>Dr. Amara Osei</h3>
+              <p class="title">Pediatric Dentist</p>
+              <p class="bio">Dr. Osei has a gift for making young patients feel at ease. With a master's in pediatric dentistry from NYU, she uses gentle techniques and child-friendly approaches to build a lifetime of healthy smiles.</p>
+              <div class="social-links">
+                <a href="#" class="social-icon-btn" aria-label="Dr. Osei's LinkedIn">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2zM4 6a2 2 0 110-4 2 2 0 010 4z" /></svg>
+                </a>
+                <a href="#" class="social-icon-btn" aria-label="Dr. Osei's email">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" /><polyline points="22,6 12,13 2,6" /></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- =================== DR. LIAM NAKAMURA =================== -->
+        <div class="team-card reveal" tabindex="0" aria-label="Dr. Liam Nakamura — hover or press Enter to learn more"
+          role="button" data-specialty="endodontics">
+          <div class="team-card-inner">
+            <div class="team-front">
+              <div class="team-avatar">
+                <div class="avatar-gradient">
+                  <div class="avatar-bg-pattern"></div>
+                  <div class="avatar-figure" style="background: linear-gradient(160deg,#14B8A6 0%,#0D9488 100%)">
+                    <div class="avatar-head"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="team-info">
+                <div class="team-name">Dr. Liam Nakamura</div>
+                <div class="team-title">Endodontist</div>
+                <div class="team-specialties">
+                  <span class="specialty-tag">Root Canals</span>
+                  <span class="specialty-tag">Microsurgery</span>
+                  <span class="specialty-tag">Pain Relief</span>
+                </div>
+                <p class="flip-hint" aria-hidden="true">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4" />
+                  </svg>
+                  Hover to see bio
+                </p>
+              </div>
+            </div>
+            <div class="team-back" aria-hidden="true">
+              <div class="team-back-avatar" style="background:linear-gradient(135deg,#14B8A6,#0D9488)">LN</div>
+              <h3>Dr. Liam Nakamura</h3>
+              <p class="title">Endodontist</p>
+              <p class="bio">Dr. Nakamura is a specialist in saving teeth through advanced root canal therapy and endodontic microsurgery. His pain-free approach has made him one of the most sought-after endodontists in the region.</p>
+              <div class="social-links">
+                <a href="#" class="social-icon-btn" aria-label="Dr. Nakamura's LinkedIn">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2zM4 6a2 2 0 110-4 2 2 0 010 4z" /></svg>
+                </a>
+                <a href="#" class="social-icon-btn" aria-label="Dr. Nakamura's email">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" /><polyline points="22,6 12,13 2,6" /></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- =================== DR. FATIMA AL-RASHID =================== -->
+        <div class="team-card reveal" tabindex="0" aria-label="Dr. Fatima Al-Rashid — hover or press Enter to learn more"
+          role="button" data-specialty="cosmetic orthodontics">
+          <div class="team-card-inner">
+            <div class="team-front">
+              <div class="team-avatar">
+                <div class="avatar-gradient">
+                  <div class="avatar-bg-pattern"></div>
+                  <div class="avatar-figure" style="background: linear-gradient(160deg,#7C3AED 0%,#A78BFA 100%)">
+                    <div class="avatar-head"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="team-info">
+                <div class="team-name">Dr. Fatima Al-Rashid</div>
+                <div class="team-title">Prosthodontist</div>
+                <div class="team-specialties">
+                  <span class="specialty-tag">Crowns</span>
+                  <span class="specialty-tag">Dentures</span>
+                  <span class="specialty-tag">Smile Rehab</span>
+                </div>
+                <p class="flip-hint" aria-hidden="true">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4" />
+                  </svg>
+                  Hover to see bio
+                </p>
+              </div>
+            </div>
+            <div class="team-back" aria-hidden="true">
+              <div class="team-back-avatar" style="background:linear-gradient(135deg,#7C3AED,#A78BFA)">FR</div>
+              <h3>Dr. Fatima Al-Rashid</h3>
+              <p class="title">Prosthodontist</p>
+              <p class="bio">Dr. Al-Rashid is a board-certified prosthodontist specialising in full-mouth reconstruction, complex restorative cases, and aesthetically driven smile rehabilitation. She trained at King's College London and Harvard.</p>
+              <div class="social-links">
+                <a href="#" class="social-icon-btn" aria-label="Dr. Al-Rashid's LinkedIn">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2zM4 6a2 2 0 110-4 2 2 0 010 4z" /></svg>
+                </a>
+                <a href="#" class="social-icon-btn" aria-label="Dr. Al-Rashid's email">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" /><polyline points="22,6 12,13 2,6" /></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- =================== DR. CARLOS MENDEZ =================== -->
+        <div class="team-card reveal" tabindex="0" aria-label="Dr. Carlos Mendez — hover or press Enter to learn more"
+          role="button" data-specialty="implants">
+          <div class="team-card-inner">
+            <div class="team-front">
+              <div class="team-avatar">
+                <div class="avatar-gradient">
+                  <div class="avatar-bg-pattern"></div>
+                  <div class="avatar-figure" style="background: linear-gradient(160deg,#EF4444 0%,#F97316 100%)">
+                    <div class="avatar-head"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="team-info">
+                <div class="team-name">Dr. Carlos Mendez</div>
+                <div class="team-title">Periodontist</div>
+                <div class="team-specialties">
+                  <span class="specialty-tag">Gum Disease</span>
+                  <span class="specialty-tag">Gum Grafting</span>
+                  <span class="specialty-tag">Laser Therapy</span>
+                </div>
+                <p class="flip-hint" aria-hidden="true">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4" />
+                  </svg>
+                  Hover to see bio
+                </p>
+              </div>
+            </div>
+            <div class="team-back" aria-hidden="true">
+              <div class="team-back-avatar" style="background:linear-gradient(135deg,#EF4444,#F97316)">CM</div>
+              <h3>Dr. Carlos Mendez</h3>
+              <p class="title">Periodontist</p>
+              <p class="bio">Dr. Mendez is a leading periodontist with expertise in treating gum disease at all stages using the latest laser technology. His minimally invasive techniques result in faster recovery and superior long-term outcomes.</p>
+              <div class="social-links">
+                <a href="#" class="social-icon-btn" aria-label="Dr. Mendez's LinkedIn">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2zM4 6a2 2 0 110-4 2 2 0 010 4z" /></svg>
+                </a>
+                <a href="#" class="social-icon-btn" aria-label="Dr. Mendez's email">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" /><polyline points="22,6 12,13 2,6" /></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- =================== DR. NINA HOFFMAN =================== -->
+        <div class="team-card reveal" tabindex="0" aria-label="Dr. Nina Hoffman — hover or press Enter to learn more"
+          role="button" data-specialty="cosmetic">
+          <div class="team-card-inner">
+            <div class="team-front">
+              <div class="team-avatar">
+                <div class="avatar-gradient">
+                  <div class="avatar-bg-pattern"></div>
+                  <div class="avatar-figure" style="background: linear-gradient(160deg,#06B6D4 0%,#3B82F6 100%)">
+                    <div class="avatar-head"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="team-info">
+                <div class="team-name">Dr. Nina Hoffman</div>
+                <div class="team-title">General & Cosmetic Dentist</div>
+                <div class="team-specialties">
+                  <span class="specialty-tag">Bonding</span>
+                  <span class="specialty-tag">Fillings</span>
+                  <span class="specialty-tag">Preventive Care</span>
+                </div>
+                <p class="flip-hint" aria-hidden="true">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4" />
+                  </svg>
+                  Hover to see bio
+                </p>
+              </div>
+            </div>
+            <div class="team-back" aria-hidden="true">
+              <div class="team-back-avatar" style="background:linear-gradient(135deg,#06B6D4,#3B82F6)">NH</div>
+              <h3>Dr. Nina Hoffman</h3>
+              <p class="title">General & Cosmetic Dentist</p>
+              <p class="bio">Dr. Hoffman brings warmth and precision to every appointment. With a passion for preventive dentistry and aesthetic bonding, she has built lasting relationships with thousands of families over her 10-year career.</p>
+              <div class="social-links">
+                <a href="#" class="social-icon-btn" aria-label="Dr. Hoffman's LinkedIn">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2zM4 6a2 2 0 110-4 2 2 0 010 4z" /></svg>
+                </a>
+                <a href="#" class="social-icon-btn" aria-label="Dr. Hoffman's email">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" /><polyline points="22,6 12,13 2,6" /></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /all-doctors-grid -->
+
+      <!-- Book CTA -->
+      <div style="text-align:center;margin-top:4rem;">
+        <p style="color:var(--text-muted);font-size:0.95rem;margin-bottom:1.25rem;">
+          Ready to book with one of our specialists?
+        </p>
+        <a href="index.html#booking" class="btn btn-primary btn-glow" aria-label="Book an appointment">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" aria-hidden="true">
+            <rect x="3" y="4" width="18" height="18" rx="2" />
+            <line x1="16" y1="2" x2="16" y2="6" />
+            <line x1="8" y1="2" x2="8" y2="6" />
+            <line x1="3" y1="10" x2="21" y2="10" />
+          </svg>
+          Book an Appointment
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================================================================
+       FOOTER
+  ================================================================ -->
+  <footer id="footer" role="contentinfo" style="background:var(--dark);color:rgba(255,255,255,0.75);padding:3rem 0 1.5rem;">
+    <div class="container" style="text-align:center;">
+      <a href="index.html" class="nav-logo" style="justify-content:center;margin-bottom:1.5rem;display:inline-flex;">
+        <svg width="28" height="28" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <circle cx="16" cy="16" r="15" fill="url(#footerGrad)" opacity="0.15" />
+          <path d="M16 5C11 5 8 9 8 13C8 16 9.5 18 9.5 21.5C9.5 25 10.5 27 13 27C15 27 15.5 23 16 23C16.5 23 17 27 19 27C21.5 27 22.5 25 22.5 21.5C22.5 18 24 16 24 13C24 9 21 5 16 5Z" fill="url(#footerGrad)" />
+          <defs>
+            <linearGradient id="footerGrad" x1="8" y1="5" x2="24" y2="27" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#4FC3F7" /><stop offset="1" stop-color="#81C784" />
+            </linearGradient>
+          </defs>
+        </svg>
+        <span style="font-family:var(--font-heading);font-size:1.2rem;color:#fff;margin-left:0.5rem;">DentalArt<span style="color:var(--primary)">Care</span></span>
+      </a>
+      <p style="color:rgba(255,255,255,0.35);font-size:0.8rem;margin-top:1rem;">© 2025 DentalArtCare. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Screen-reader utility -->
+  <style>
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+  </style>
+
+  <script>
+    /* ---- Page Loader ---- */
+    const loader = document.getElementById('page-loader');
+    function hideLoader() { loader.classList.add('hidden'); }
+    if (document.readyState === 'complete') {
+      setTimeout(hideLoader, 400);
+    } else {
+      window.addEventListener('load', () => setTimeout(hideLoader, 400));
+    }
+
+    /* ---- Navbar scroll ---- */
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 60);
+    }, { passive: true });
+
+    /* ---- Hamburger ---- */
+    const hamburgerBtn = document.getElementById('hamburger-btn');
+    const navMobile = document.getElementById('nav-mobile-menu');
+    let mobileNavOpen = false;
+    hamburgerBtn.addEventListener('click', () => {
+      mobileNavOpen = !mobileNavOpen;
+      hamburgerBtn.classList.toggle('active', mobileNavOpen);
+      navMobile.classList.toggle('open', mobileNavOpen);
+      hamburgerBtn.setAttribute('aria-expanded', String(mobileNavOpen));
+      navMobile.setAttribute('aria-hidden', String(!mobileNavOpen));
+      document.body.style.overflow = mobileNavOpen ? 'hidden' : '';
+    });
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        if (mobileNavOpen) hamburgerBtn.click();
+      });
+    });
+
+    /* ---- Scroll Reveal ---- */
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.10, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.reveal').forEach((el, i) => {
+      const parent = el.parentElement;
+      if (parent && parent.classList.contains('all-doctors-grid')) {
+        const siblings = Array.from(parent.querySelectorAll('.reveal'));
+        el.style.transitionDelay = `${siblings.indexOf(el) * 0.08}s`;
+      }
+      revealObserver.observe(el);
+    });
+
+    /* ---- Team card keyboard flip ---- */
+    document.querySelectorAll('.team-card').forEach(card => {
+      card.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          card.classList.toggle('flipped');
+          const back = card.querySelector('.team-back');
+          back.setAttribute('aria-hidden', String(!card.classList.contains('flipped')));
+        }
+      });
+    });
+
+    /* ---- Ripple on buttons ---- */
+    function addRipple(e) {
+      const btn = e.currentTarget;
+      const rect = btn.getBoundingClientRect();
+      const size = Math.max(rect.width, rect.height);
+      const x = e.clientX - rect.left - size / 2;
+      const y = e.clientY - rect.top - size / 2;
+      const ripple = document.createElement('span');
+      ripple.classList.add('ripple');
+      ripple.style.cssText = `width:${size}px;height:${size}px;left:${x}px;top:${y}px`;
+      btn.appendChild(ripple);
+      ripple.addEventListener('animationend', () => ripple.remove());
+    }
+    document.querySelectorAll('.btn').forEach(btn => btn.addEventListener('click', addRipple));
+
+    /* ---- Filter functionality ---- */
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const doctorCards = document.querySelectorAll('#doctors-grid .team-card');
+    const countEl = document.getElementById('doctors-count');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const filter = btn.dataset.filter;
+
+        // Update active state
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        // Show/hide cards
+        let visible = 0;
+        doctorCards.forEach(card => {
+          const specialty = card.dataset.specialty || '';
+          const matches = filter === 'all' || specialty.includes(filter);
+          card.style.display = matches ? '' : 'none';
+          if (matches) visible++;
+        });
+
+        countEl.innerHTML = `Showing <strong>${visible}</strong> specialist${visible !== 1 ? 's' : ''}`;
+      });
+    });
+
+    /* ---- Smooth scroll for in-page anchors ---- */
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    /* ---- will-change hints ---- */
+    document.querySelectorAll('.team-card-inner').forEach(el => {
+      el.style.willChange = 'transform';
+    });
+  </script>
+
+</body>
+</html>
