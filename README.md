@@ -16,41 +16,39 @@ A modern, highly responsive, and premium web application designed for a state-of
 
 ---
 
-## 🚀 How to Run the Project
+## 🚀 How to Run the Project (Quick Start)
 
-We have set up a lightweight local development server using **Vite** so you can run the project with a single command without needing Python.
+Once you clone this repository to a new or different laptop, follow these simple steps to run it properly:
 
 ### 📋 Prerequisites
 
-Ensure you have **Node.js** and **npm** installed on your system. If not, you can download it from [nodejs.org](https://nodejs.org/).
+Ensure you have **Node.js** (which includes **npm**) installed on your machine. You can download it from [nodejs.org](https://nodejs.org/).
+
+### ⚡ Direct Step-by-Step Command
+
+Open your terminal, navigate to the project directory, and run the following commands:
+
+```bash
+# 1. Install the development server dependencies
+npm install
+
+# 2. Start the local development server
+npm run dev
+```
+
+*This starts a super-fast Vite server. Your terminal will show a local link (typically `http://localhost:5173`). Cmd+Click or copy the link into your browser to view the beautiful clinic site!*
 
 ---
 
-### Option 1: Standard NPM Command (Recommended)
+### 🌐 Alternative Ways to Run
 
-1. **Install the dependencies:**
-   Make sure you are in the root directory `DentalArtsCare` and run:
-   ```bash
-   npm install
-   ```
-
-2. **Start the development server:**
-   ```bash
-   npm run dev
-   ```
-   *This starts the super-fast Vite server. Your terminal will show a link like `http://localhost:5173`. Command click or copy it into your browser to view the site!*
-
----
-
-### Option 2: Run directly with NPX (No installation required)
-
-If you don't want to run `npm install`, you can launch a temporary local server directly:
+#### Option A: Zero-install running using NPX
+If you do not want to install any dependencies locally, you can run it instantly using:
 ```bash
 npx serve dentalarts
 ```
-*Open your browser and navigate to the address displayed in your terminal (usually `http://localhost:3000` or `http://localhost:5000`).*
+*Open the link displayed in your terminal (usually `http://localhost:3000`).*
 
----
 
 ### Option 3: Double-Click (Simple Open)
 
