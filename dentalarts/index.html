@@ -849,78 +849,59 @@
         <div class="booking-form reveal" role="form" aria-label="Appointment booking form">
           <!-- Success overlay -->
           <div class="form-success" id="form-success" aria-live="polite" role="alert">
-            <div class="checkmark-wrap">
+            <div class="checkmark-wrap" style="background: rgba(37, 211, 102, 0.15);">
               <svg class="checkmark-svg" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg"
                 aria-hidden="true">
-                <circle class="checkmark-circle" cx="26" cy="26" r="24" />
-                <path class="checkmark-check" d="M14 27l8 8 16-16" />
+                <circle class="checkmark-circle" cx="26" cy="26" r="24" style="stroke: #25D366;" />
+                <path class="checkmark-check" d="M14 27l8 8 16-16" style="stroke: #25D366;" />
               </svg>
             </div>
-            <h3>Appointment Requested!</h3>
-            <p>Thank you! We'll confirm your appointment within 2 hours. Check your email for details.</p>
-            <button class="btn btn-primary" id="reset-form-btn" style="margin-top:0.5rem">Book Another</button>
+            <h3>Opening WhatsApp...</h3>
+            <p>We are opening WhatsApp to send your booking request. If it doesn't open automatically, click below:</p>
+            <div
+              style="display: flex; gap: 10px; margin-top: 0.5rem; flex-wrap: wrap; justify-content: center; align-items: center;">
+              <a href="#" class="btn btn-whatsapp" id="manual-whatsapp-btn" target="_blank"
+                style="text-decoration:none; display: inline-flex; align-items: center; justify-content: center; gap: 8px; font-size: 0.9rem; padding: 0.8rem 1.5rem;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path
+                    d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.262 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.5-5.739-1.446L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.42 9.864-9.864.002-2.637-1.03-5.115-2.906-6.99C16.654 1.906 14.18 .874 11.54.874 6.1 1.01 1.68 5.433 1.677 10.877c-.001 1.639.499 3.238 1.45 4.839L2.14 21.162l4.507-1.008zM17.15 15.3c-.287-.144-1.7-.84-1.962-.936-.264-.096-.456-.144-.648.144-.19.288-.741.936-.909 1.128-.168.19-.336.216-.624.072-1.359-.68-2.35-1.196-3.268-2.77-.243-.418.243-.388.694-1.288.077-.154.038-.288-.019-.402-.057-.115-.456-1.104-.624-1.512-.164-.399-.344-.344-.472-.35-.12-.006-.264-.006-.407-.006-.144 0-.384.054-.585.274-.2.22-1.758 1.72-1.758 4.195s1.8 4.863 2.05 5.205c.25.341 3.543 5.412 8.583 7.585 1.2.516 2.138.825 2.87 1.059 1.206.383 2.302.33 3.169.2 1.03-.155 2.164-.885 2.467-1.743.302-.857.302-1.595.212-1.742-.09-.147-.336-.243-.624-.387z" />
+                </svg>
+                Open WhatsApp
+              </a>
+              <button class="btn btn-outline" id="reset-form-btn"
+                style="border-radius: var(--radius-btn); font-size: 0.9rem; padding: 0.8rem 1.5rem; border-color: var(--border);">Edit
+                Details</button>
+            </div>
           </div>
 
           <form id="appointment-form" novalidate aria-label="Appointment request form">
-            <div class="form-row">
-              <div class="form-group">
-                <label for="field-name">Full Name <span class="req" aria-hidden="true">*</span></label>
-                <input type="text" id="field-name" name="name" class="form-control" placeholder="John Smith"
-                  autocomplete="name" aria-required="true" aria-describedby="name-error" />
-                <div class="form-error" id="name-error" role="alert" aria-live="polite">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    aria-hidden="true">
-                    <circle cx="12" cy="12" r="10" />
-                    <line x1="12" y1="8" x2="12" y2="12" />
-                    <line x1="12" y1="16" x2="12.01" y2="16" />
-                  </svg>
-                  Please enter your full name
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="field-phone">Phone Number <span class="req" aria-hidden="true">*</span></label>
-                <input type="tel" id="field-phone" name="phone" class="form-control" placeholder="+1 (555) 000-0000"
-                  autocomplete="tel" aria-required="true" aria-describedby="phone-error" />
-                <div class="form-error" id="phone-error" role="alert" aria-live="polite">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    aria-hidden="true">
-                    <circle cx="12" cy="12" r="10" />
-                    <line x1="12" y1="8" x2="12" y2="12" />
-                    <line x1="12" y1="16" x2="12.01" y2="16" />
-                  </svg>
-                  Please enter a valid phone number
-                </div>
-              </div>
-            </div>
-
             <div class="form-group">
-              <label for="field-email">Email Address <span class="req" aria-hidden="true">*</span></label>
-              <input type="email" id="field-email" name="email" class="form-control" placeholder="john@example.com"
-                autocomplete="email" aria-required="true" aria-describedby="email-error" />
-              <div class="form-error" id="email-error" role="alert" aria-live="polite">
+              <label for="field-name">Full Name <span class="req" aria-hidden="true">*</span></label>
+              <input type="text" id="field-name" name="name" class="form-control" placeholder="eg : Raza Ansari"
+                autocomplete="name" aria-required="true" aria-describedby="name-error" />
+              <div class="form-error" id="name-error" role="alert" aria-live="polite">
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                   aria-hidden="true">
                   <circle cx="12" cy="12" r="10" />
                   <line x1="12" y1="8" x2="12" y2="12" />
                   <line x1="12" y1="16" x2="12.01" y2="16" />
                 </svg>
-                Please enter a valid email address
+                Please enter your full name
               </div>
             </div>
 
             <div class="form-row">
               <div class="form-group">
-                <label for="field-service">Service Needed <span class="req" aria-hidden="true">*</span></label>
-                <select id="field-service" name="service" class="form-control" aria-required="true"
-                  aria-describedby="service-error">
+                <label for="field-service">Service Needed</label>
+                <select id="field-service" name="service" class="form-control" aria-describedby="service-error">
                   <option value="" disabled selected>Select a service</option>
-                  <option value="whitening">Teeth Whitening</option>
-                  <option value="implants">Dental Implants</option>
-                  <option value="braces">Braces & Orthodontics</option>
-                  <option value="root-canal">Root Canal Therapy</option>
-                  <option value="cleaning">Professional Cleaning</option>
-                  <option value="veneers">Porcelain Veneers</option>
-                  <option value="consultation">General Consultation</option>
+                  <option value="Teeth Whitening">Teeth Whitening</option>
+                  <option value="Dental Implants">Dental Implants</option>
+                  <option value="Braces & Orthodontics">Braces & Orthodontics</option>
+                  <option value="Root Canal Therapy">Root Canal Therapy</option>
+                  <option value="Professional Cleaning">Professional Cleaning</option>
+                  <option value="Porcelain Veneers">Porcelain Veneers</option>
+                  <option value="General Consultation">General Consultation</option>
                 </select>
                 <div class="form-error" id="service-error" role="alert" aria-live="polite">
                   <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -933,9 +914,8 @@
                 </div>
               </div>
               <div class="form-group">
-                <label for="field-date">Preferred Date <span class="req" aria-hidden="true">*</span></label>
-                <input type="date" id="field-date" name="date" class="form-control" aria-required="true"
-                  aria-describedby="date-error" />
+                <label for="field-date">Preferred Date</label>
+                <input type="date" id="field-date" name="date" class="form-control" aria-describedby="date-error" />
                 <div class="form-error" id="date-error" role="alert" aria-live="polite">
                   <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                     aria-hidden="true">
@@ -948,12 +928,13 @@
               </div>
             </div>
 
-            <button type="submit" class="btn btn-primary form-submit-btn" id="submit-btn">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                stroke-linecap="round" aria-hidden="true">
-                <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" />
+            <button type="submit" class="btn btn-whatsapp form-submit-btn" id="submit-btn"
+              style="display: flex; align-items: center; justify-content: center; gap: 8px;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.262 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.5-5.739-1.446L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.42 9.864-9.864.002-2.637-1.03-5.115-2.906-6.99C16.654 1.906 14.18 .874 11.54.874 6.1 1.01 1.68 5.433 1.677 10.877c-.001 1.639.499 3.238 1.45 4.839L2.14 21.162l4.507-1.008zM17.15 15.3c-.287-.144-1.7-.84-1.962-.936-.264-.096-.456-.144-.648.144-.19.288-.741.936-.909 1.128-.168.19-.336.216-.624.072-1.359-.68-2.35-1.196-3.268-2.77-.243-.418.243-.388.694-1.288.077-.154.038-.288-.019-.402-.057-.115-.456-1.104-.624-1.512-.164-.399-.344-.344-.472-.35-.12-.006-.264-.006-.407-.006-.144 0-.384.054-.585.274-.2.22-1.758 1.72-1.758 4.195s1.8 4.863 2.05 5.205c.25.341 3.543 5.412 8.583 7.585 1.2.516 2.138.825 2.87 1.059 1.206.383 2.302.33 3.169.2 1.03-.155 2.164-.885 2.467-1.743.302-.857.302-1.595.212-1.742-.09-.147-.336-.243-.624-.387z" />
               </svg>
-              Request Appointment
+              Book via WhatsApp
             </button>
           </form>
         </div>
@@ -1040,7 +1021,7 @@
             <div class="icon" aria-hidden="true">✉️</div>
             <div class="text">
               <strong>Email</strong>
-              <a href="mailto:hello@dentalartcare.com" style="color:inherit">dentalartcare@gmail.com</a>
+              <a href="mailto:dentalartcare.pk@gmail.com" style="color:inherit">dentalartcare.pk@gmail.com</a>
             </div>
           </div>
           <div class="hours-grid" style="margin-top:1rem">

@@ -327,9 +327,6 @@ document.querySelectorAll('.team-card').forEach(card => {
     let valid = true;
 
     const name = document.getElementById('field-name').value.trim();
-    const phone = document.getElementById('field-phone').value.trim();
-    const email = document.getElementById('field-email').value.trim();
-    const svc = document.getElementById('field-service').value;
     const date = document.getElementById('field-date').value;
 
     if (!name || name.length < 2) {
@@ -337,23 +334,8 @@ document.querySelectorAll('.team-card').forEach(card => {
       valid = false;
     }
 
-    if (!phone || phone.replace(/\D/g, '').length < 7) {
-      showError('field-phone', 'phone-error');
-      valid = false;
-    }
-
-    const emailRx = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!email || !emailRx.test(email)) {
-      showError('field-email', 'email-error');
-      valid = false;
-    }
-
-    if (!svc) {
-      showError('field-service', 'service-error');
-      valid = false;
-    }
-
-    if (!date || date < today) {
+    // Only validate date if a date has been selected (as it is now optional)
+    if (date && date < today) {
       showError('field-date', 'date-error');
       valid = false;
     }
@@ -366,17 +348,60 @@ document.querySelectorAll('.team-card').forEach(card => {
 
     if (!validate()) return;
 
-    // Show success
+    const name = document.getElementById('field-name').value.trim();
+    const svc = document.getElementById('field-service').value;
+    const date = document.getElementById('field-date').value;
+
+    // Dynamic message segments based on optional selections
+    let serviceSegment = "";
+    if (svc) {
+      serviceSegment = ` a *${svc}*`;
+    }
+
+    let dateSegment = "Flexible / To be decided";
+    if (date) {
+      try {
+        const parsedDate = new Date(date);
+        if (!isNaN(parsedDate)) {
+          dateSegment = parsedDate.toLocaleDateString('en-US', {
+            weekday: 'long',
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+          });
+        }
+      } catch (err) {
+        // Fallback to raw date format
+        dateSegment = date;
+      }
+    }
+
+    // Professional predefined text for WhatsApp message
+    const message = `Hello DentalArtCare! I would like to book${serviceSegment} appointment.\n\n*My Details:*\n• *Name:* ${name}\n• *Preferred Date:* ${dateSegment}\n\nPlease let me know if you have availability. Thank you!`;
+    
+    // Primary number: +92 3429069970
+    const whatsappUrl = `https://wa.me/923429069970?text=${encodeURIComponent(message)}`;
+
+    // Set href of fallback link in the success overlay
+    const manualBtn = document.getElementById('manual-whatsapp-btn');
+    if (manualBtn) {
+      manualBtn.href = whatsappUrl;
+    }
+
+    // Show success overlay
     successBox.classList.add('show');
 
     // Trigger checkmark animation
-    const circle = successBox.querySelector('.checkmark-circle');
-    const check = successBox.querySelector('.checkmark-check');
     const wrap = successBox.querySelector('.checkmark-svg');
     wrap.classList.add('checkmark-animate');
 
     // Scroll to success
     successBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+    // Open WhatsApp automatically in a new window/tab after 1s
+    setTimeout(() => {
+      window.open(whatsappUrl, '_blank');
+    }, 1000);
   });
 
   resetBtn.addEventListener('click', () => {

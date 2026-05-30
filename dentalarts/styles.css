@@ -269,6 +269,21 @@ textarea {
   transform: translateY(0);
 }
 
+.btn-whatsapp {
+  background: linear-gradient(135deg, #25D366, #128C7E);
+  color: #fff;
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.45);
+}
+
+.btn-whatsapp:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(37, 211, 102, 0.55);
+}
+
+.btn-whatsapp:active {
+  transform: translateY(0);
+}
+
 /* Glow pulse on CTA */
 .btn-glow {
   animation: glowPulse 2.5s ease-in-out infinite;
@@ -1543,6 +1558,7 @@ textarea {
   text-align: center;
   gap: 1rem;
   padding: 2rem;
+  z-index: 10;
 }
 
 .form-success.show {
