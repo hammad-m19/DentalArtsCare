@@ -242,6 +242,7 @@ textarea {
   position: relative;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
   padding: 0.85rem 2rem;
   border-radius: var(--radius-btn);
@@ -411,9 +412,13 @@ textarea {
   width: 100%;
 }
 
-.nav-cta {
+.nav-links a.nav-cta {
   padding: 0.55rem 1.4rem;
   font-size: 0.875rem;
+}
+
+.nav-links a.btn::after {
+  content: none;
 }
 
 /* Hamburger */
@@ -1097,6 +1102,43 @@ textarea {
   background-image: radial-gradient(circle at 30% 40%, #fff 1px, transparent 1px),
     radial-gradient(circle at 70% 60%, #fff 1px, transparent 1px);
   background-size: 32px 32px;
+}
+
+/* Photo-based avatar (replaces SVG silhouette) */
+.team-avatar-photo {
+  height: 260px;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(160deg, #f0f9ff 0%, #e8f5f9 100%);
+}
+
+.team-avatar-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 0.5s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+
+.team-card:hover .team-avatar-photo img {
+  transform: scale(1.05);
+}
+
+.team-back-photo {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 1.25rem;
+  border: 2px solid rgba(79, 195, 247, 0.4);
+  box-shadow: 0 0 20px rgba(79, 195, 247, 0.15);
+}
+
+.team-back-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
 }
 
 .team-info {
