@@ -1,3 +1,9 @@
+// Force page load from top
+if ('scrollRestoration' in history) {
+  history.scrollRestoration = 'manual';
+}
+window.scrollTo(0, 0);
+
 /* ----------------------------------------------------------------
    Utility: add ripple to all .btn elements
 ---------------------------------------------------------------- */

@@ -294,6 +294,12 @@
   </style>
 
   <script>
+    // Force page load from top
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+    }
+    window.scrollTo(0, 0);
+
     /* ---- Page Loader ---- */
     const loader = document.getElementById('page-loader');
     function hideLoader() { loader.classList.add('hidden'); }
