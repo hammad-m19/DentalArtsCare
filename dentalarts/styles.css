@@ -1021,7 +1021,11 @@ textarea {
   transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
 }
 
-.team-card:hover .team-card-inner,
+@media (hover: hover) {
+  .team-card:hover .team-card-inner {
+    transform: rotateY(180deg);
+  }
+}
 .team-card.flipped .team-card-inner {
   transform: rotateY(180deg);
 }
@@ -1996,12 +2000,7 @@ textarea {
   }
 }
 
-/* Touch: disable hover flip on mobile */
-@media (hover: none) {
-  .team-card:hover .team-card-inner {
-    transform: none;
-  }
-}
+
 
 /* ============================================================
    GALLERY SECTION (HOME PREVIEW)

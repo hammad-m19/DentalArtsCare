@@ -230,6 +230,16 @@ document.querySelectorAll('.team-card').forEach(card => {
       back.setAttribute('aria-hidden', String(!card.classList.contains('flipped')));
     }
   });
+
+  // For touch devices, toggle flip on click
+  card.addEventListener('click', e => {
+    if (window.matchMedia('(hover: none)').matches) {
+      if (e.target.closest('a') || e.target.closest('button')) return;
+      card.classList.toggle('flipped');
+      const back = card.querySelector('.team-back');
+      back.setAttribute('aria-hidden', String(!card.classList.contains('flipped')));
+    }
+  });
 });
 
 /* ----------------------------------------------------------------
